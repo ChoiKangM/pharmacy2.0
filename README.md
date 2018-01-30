@@ -1084,3 +1084,73 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
 ### 폰트
 ###### app/assets/stylesheets/fonts
 
+Notice, Handout, Card
+---------------------
+### MVC 설정
+###### 모델
+>$ rails g model Notice title:string content:text user:belongs_to  
+>$ rails g model Handout title:string content:text user:belongs_to file:string  
+>$ rails g model Card title:string content:text user:belongs_to image:string  
+>$ rails g model Nreply content:text user:belongs_to notice:belongs_to  
+>$ rails g model Hreply content:text user:belongs_to handout:belongs_to  
+>$ rails g model Creply content:text user:belongs_to card:belongs_to 
+
+###### 컨트롤러
+>$ rails g controller Notices index show new edit  
+>$ rails g controller Handouts index show new edit  
+>$ rails g controller Cards index show new edit  
+>$ rails g controller Nreply create destroy  
+>$ rails g controller Hreply create destroy  
+>$ rails g controller Creply create destroy  
+>내용 채우자
+
+###### 뷰
+>내용 채우자  
+
+###### 라우팅
+```
+Rails.application.routes.draw do
+  resources :cards do
+    resources :creplies, only: [:create, :destroy]
+  end
+  resources :handouts do
+    resources :hreplies, only: [:create, :destroy]
+  end
+  resources :notices do
+    resources :nreplies, only: [:create, :destroy]
+  end
+  devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks' }
+  get '/introductions/user_information', to: 'introductions#user_information', as: 'user_information'
+  root 'introductions#index'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+```
+
+###### 업로더
+>$ rails generate uploader File  
+>$ rails generate uploader image  
+>$ rails generate uploader proimg  
+>내용 수정  
+
+###### Imagemagick 추가하자
+>$ sudo yum update  
+>$ sudo yum install ImageMagick  
+
+
+### AWS setting
+###### config/initializers/carrierwave.rb
+
+```
+require 'carrierwave/orm/activerecord'
+CarrierWave.configure do |config|
+  config.fog_provider = 'fog/aws' # required
+  config.fog_credentials = {
+  provider: 'AWS', # required
+  aws_access_key_id: ENV['AWS_KEY'], # required
+  aws_secret_access_key: ENV['AWS_SECRET'], # required
+  region: ' ap-southeast-1 ', # optional, defaults to 'us-east-1'
+  }
+  config.fog_directory = 'name_of_directory' # required
+end
+```
+

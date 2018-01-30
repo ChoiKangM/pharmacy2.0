@@ -1,0 +1,66 @@
+<footer class="p-0">
+  <div class="jumbotron m-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-2 mb-2">
+          <!--<h6 class="nav-link footer-link my-auto">FOLLOW US</h6>-->
+          <a class="mt-2 p-0" href="#" style="font-size: 1.5rem; color: #3d3d3d">FOLLOW US</a>
+        </div>
+        <div class="col-md-4 mb-2 text-center d-flex flex-row justify-content-center">
+            <%= link_to fa_icon("facebook"), root_path, class: "nav-link footer-link" %>  
+            <%= link_to fa_icon("google"), root_path, class: "nav-link footer-link" %>  
+            <%= link_to fa_icon("youtube-play"), root_path, class: "nav-link footer-link" %>
+        </div>
+        <div class="col-md-2 footer-knup d-flex flex-column">
+          <p>  
+            <a class="navbar-brand mt-2 p-0" href="#" style="font-size: 1.5rem; color: #3d3d3d">KNUP</a>
+          </p>  
+        </div>
+        <div class="col-md-4 d-flex flex-row">
+          <div class="col-md-6">
+            <p>  
+              <%= link_to "개인정보", root_path, class: "nav-link footer-link" %>    
+            </p>  
+            <p class ="m-0">  
+              <%= link_to "이용약관", root_path, class: "nav-link footer-link" %>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p>  
+              <%= link_to "G-suite", root_path, class: "nav-link footer-link" %>
+            </p>  
+            <p class ="m-0">
+              <%= link_to fa_icon("question-circle", text: "Help"), root_path, class: "nav-link footer-link" %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-3">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-2 footer-knup d-flex justify-content-center align-items-center">
+          <p class="m-0">  
+            <a class="mt-2 p-0" href="#" style="font-size: 1.5rem; color: #3d3d3d">CONTACT US</a>
+          </p>  
+        </div>
+        <div class="col-md-4 d-flex flex-row">
+            <a href="https://goo.gl/forms/f6CVwS4DtOD0R1i63" class="navlink footer-link col-6" data-toggle="tooltip" data-placement="bottom" title="admin@knup.co.kr">약학대학</a>
+            <a href="https://goo.gl/forms/HrZ2IuKNQHYjtrW32" class="navlink footer-link col-6" data-toggle="tooltip" data-placement="bottom" title="choikm3847@likelion.org">멋쟁이 사자처럼</a>
+            <!--<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">-->
+            <!--  Tooltip-->
+            <!--</button>-->
+        </div>
+        <div class="col-md-6 d-flex align-items-center mt-3">
+          <p style="color: #3d3d3d">
+            Copyright © 2018. KNUP.  All rights reserved.
+          </p>
+        </div>
+      </div>
+      <hr class="my-3">
+    </div>
+  </div>
+</footer>
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+})
+</script>

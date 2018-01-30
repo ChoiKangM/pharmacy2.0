@@ -10,7 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180130063727) do
+ActiveRecord::Schema.define(version: 20180130075907) do
+
+  create_table "cards", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
+  end
+
+  create_table "creplies", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "card_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_creplies_on_card_id"
+    t.index ["user_id"], name: "index_creplies_on_user_id"
+  end
+
+  create_table "handouts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.string   "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_handouts_on_user_id"
+  end
+
+  create_table "hreplies", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "handout_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["handout_id"], name: "index_hreplies_on_handout_id"
+    t.index ["user_id"], name: "index_hreplies_on_user_id"
+  end
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,6 +59,25 @@ ActiveRecord::Schema.define(version: 20180130063727) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_identities_on_user_id"
+  end
+
+  create_table "notices", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notices_on_user_id"
+  end
+
+  create_table "nreplies", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "notice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["notice_id"], name: "index_nreplies_on_notice_id"
+    t.index ["user_id"], name: "index_nreplies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -6,11 +6,168 @@
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
  *= require_tree .
  *= require_self
  */
 @import "bootstrap";
+@import "font-awesome";
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(asset-path('fonts/NotoSansKR-Thin.woff2')) format('woff2'),
+       url(asset-path('fonts/NotoSansKR-Thin.woff')) format('woff'),
+       url(asset-path('fonts/NotoSansKR-Thin.otf')) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(asset-path('fonts/NotoSansKR-Light.woff2')) format('woff2'),
+       url(asset-path('fonts/NotoSansKR-Light.woff')) format('woff'),
+       url(asset-path('fonts/NotoSansKR-Light.otf')) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(asset-path('fonts/NotoSansKR-Regular.woff2')) format('woff2'),
+        url(asset-path('fonts/NotoSansKR-Regular.woff')) format('woff'),
+        url(asset-path('fonts/NotoSansKR-Regular.otf')) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(asset-path('fonts/NotoSansKR-Medium.woff2')) format('woff2'),
+        url(asset-path('fonts/NotoSansKR-Medium.woff')) format('woff'),
+        url(asset-path('fonts/NotoSansKR-Medium.otf')) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(asset-path('fonts/NotoSansKR-Bold.woff2')) format('woff2'),
+        url(asset-path('fonts/NotoSansKR-Bold.woff')) format('woff'),
+        url(asset-path('fonts/NotoSansKR-Bold.otf'))format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 900;
+   src: url(asset-path('fonts/NotoSansKR-Black.woff2')) format('woff2'),
+        url(asset-path('fonts/NotoSansKR-Black.woff')) format('woff'),
+        url(asset-path('fonts/NotoSansKR-Black.otf')) format('opentype');
+ }
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+//color management
+.text-muted{ 
+    color: #8492a7 !important;
+}
+.text-primary{ 
+    color: #00b5ff !important;
+}
+.text-success{ 
+    color: #00d061 !important;
+}
+.text-info{ 
+    color: #7e55f3 !important;
+}
+.text-warning{ 
+    color: #ffd654 !important;
+}
+.text-danger{ 
+    color: #ff4743 !important;
+}
+//background-color
+.bg-muted{ 
+    background-color: #8492a7 !important;
+}
+.bg-primary{ 
+    background-color: #00b5ff !important;
+}
+.bg-success{ 
+    background-color: #00d061 !important;
+}
+.bg-info{ 
+    background-color: #7e55f3 !important;
+}
+.bg-warning{ 
+    background-color: #ffd654 !important;
+}
+.bg-danger{ 
+    background-color: #ff4743 !important;
+}
+
+//btn-color
+.btn-muted{ 
+    border-color: #8492a7 !important;
+    background-color: #8492a7 !important;
+}
+.btn-primary{ 
+    border-color: #00b5ff !important;
+    background-color: #00b5ff !important;
+}
+.btn-success{ 
+    border-color: #00d061!important;
+    background-color: #00d061 !important;
+}
+.btn-info{ 
+    border-color: #7e55f3 !important;
+    background-color: #7e55f3 !important;
+}
+.btn-warning{ 
+    border-color: #ffd654 !important;
+    background-color: #ffd654 !important;
+}
+.btn-danger{ 
+    border-color: #ff4743 !important;
+    background-color: #ff4743 !important;
+}
+
+
+.footer-link{
+  color: #3d3d3d;
+}
+.footer-knup{
+  display: flex;
+  align-items: center;
+}
+a{
+  color: #000000;
+  text-decoration: none;
+}
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.nav-link{
+    font-size: 1rem;
+}
+.background{
+    background-color: rgba(187,238,255,0.3);
+}
+.carousel-inner{
+    height: 600px;
+}
+.round-panel{
+  
+  margin-right: 3;
+  border-radius: 0.25rem;
+  width: 98%;
+  padding: 0.75rem 0.5rem;
+  background-color: rgba(0,196,255,0.3);
+  border-color: #b8daff;
+}
+.img-circular{
+  border-radius: 16px;
+ -webkit-border-radius: 16px;
+ -moz-border-radius: 16px;
+}
