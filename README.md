@@ -1159,8 +1159,7 @@ end
 >참조: https://github.com/svenfuchs/rails-i18n  
 >###### config/application.rb  : 한국어로 설정하자
 >>config.i18n.default_locale = :ko  
->###### ko.yml 설정하자
-
+>###### ko.yml 설정하자  
 ###### devise-i18n
 >참조: https://github.com/tigrish/devise-i18n  
 >#한글 번역파일 나온다  

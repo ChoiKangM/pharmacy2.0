@@ -10,6 +10,8 @@ ko:
         current_sign_in_at: "현재 접속 시간"
         current_sign_in_ip: "현재 접속 IP주소"
         email: "이메일"
+        name: "이름"
+        proimg: "프로필"
         encrypted_password: "암호화된 비밀번호"
         failed_attempts: "접속시도 실패"
         last_sign_in_at: "마지막 접속 시간"

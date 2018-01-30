@@ -18,14 +18,6 @@
           <%= f.label :name %>
           <%= f.text_field :name, autofocus: true, class: 'form-control col-md-6 col-12' %>
         </div>
-        <div class="form-group">
-          <%= f.label :nickname %>
-          <%= f.text_field :nickname, autofocus: true, class: 'form-control col-md-6 col-12' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :duty %>
-          <%= f.text_field :duty, autofocus: true, class: 'form-control col-md-6 col-12' %>
-        </div>
         <div class="form-group">  
           <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: "leave blank if you don't want to change it") %>)</i>
           <%= f.password_field :password, autocomplete: "off", class: 'form-control col-md-6 col-12',hint: "leave it blank if you don't want to change it", required: false %>
@@ -34,15 +26,15 @@
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, class: 'form-control col-md-6 col-12',required: false %>
         </div>
-        <% if current_user.user_face.url.present? %>
-          <%= image_tag(current_user.user_face.medium.url) %>
+        <% if current_user.proimg.present? %>
+          <%= image_tag(current_user.proimg) %>
         <% end %>
         <div class="input-group mb-3 flex-column">
           <div class="input-group-prepend my-2">
             <span class="input-group-text" id="inputGroup-sizing-default">프로필</span>
           </div>
-          <%= f.hidden_field :user_face_cache %>
-          <%= f.file_field :user_face, placeholder: "눌러 파일을 선택하세요" %>
+          <%#= f.hidden_field :proimg_cache %>
+          <%= f.file_field :proimg, placeholder: "눌러 파일을 선택하세요" %>
         </div>
         <div class="form-group">
           <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes',default: 'we need your current password to confirm your changes') %>)</i>
