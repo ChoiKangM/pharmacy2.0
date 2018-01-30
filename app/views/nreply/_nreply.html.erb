@@ -1,0 +1,8 @@
+<div class="row">
+	<%= form_for([@notice,@nreply],html: { class: "w-100 d-flex"}) do |c| %>
+		<%= c.hidden_field :notice_id, value: @notice.id %>
+		<%= c.hidden_field :user_id, value: current_user.id %>
+		<%= c.text_field :content, class: "form-control col-8 col-md-10 ml-3 mr-2 pr-2" %>
+		<%= button_to "댓글", notice_nreplies_path(@notice), method: :post, class: "btn btn-primary" %>
+	<% end %>
+</div>

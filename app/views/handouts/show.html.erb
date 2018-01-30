@@ -1,2 +1,23 @@
-<h1>Handouts#show</h1>
-<p>Find me in app/views/handouts/show.html.erb</p>
+<div class="container my-4">
+  <div class="card">
+    <div class="card-header row px-2 py-4 mx-0">
+      <h2 class="col-md-8 col-12"><%= @handout.title %></h2>
+      <h4 class="col-md-2 col-6"><%= @handout.user.nickname %></h4>
+      <h4 class="col-md-2 col-6"><%= distance_of_time_in_words(@handout.created_at, Time.now) %> 전</h4>
+    </div>
+    <div class="card-body">
+      <p class="card-text" align="right">
+        <%= link_to fa_icon("download 2x"), @handout.file.url, class: "btn btn-primary" %>
+      </p>
+      <p class="card-text"><%= @handout.content.html_safe %></p>
+      <% if current_user.id == @handout.user.id %>
+        <%= link_to fa_icon("pencil 2x"), edit_handout_path(@handout), class: "btn btn-warning" %>
+        <%= link_to fa_icon("trash-o 2x"), handout_path(@handout), method: :delete, class: "btn btn-danger"%>
+      <% end %>
+    </div>
+    <div class="card-footer">
+      <%= render 'hreplies/hreply' %>
+      <%= render 'hreplies/hreplies' %>
+    </div>
+  </div>
+</div>

@@ -2,11 +2,11 @@
   <div class="card" style="width: 18rem;">
     <%= image_tag current_user.proimg, alt: "user_face", width: '286', height: '286' %>
     <div class="card-header">
-      이름: <%= current_user.name %>
+      이메일: <%= current_user.email %>
     </div>
     <ul class="list-group list-group-flush">
-      이메일: <li class="list-group-item"><%= current_user.email %></li>
-      학번: <li class="list-group-item"><%#= current_user.name %></li>
+      <li class="list-group-item">이  름: <%= current_user.name %></li>
+      <li class="list-group-item">학  번: 20XXXXXXXX<%#= current_user.name %></li>
     </ul>
     <div class="card-body">
       <%= link_to fa_icon("pencil", text: "Edit Profile"), edit_user_registration_path, class: "btn btn-primary" %>
