@@ -12,7 +12,7 @@
     </div>
     <div class="form-group">
       <%= h.label :file, value: "학습자료" %>
-      <%= h.file_field :file, class: 'form-control' %>
+      <%= h.file_field(:file, class: 'form-control') %>
     </div>
     <%= button_to "게시하기", handouts_path, method: :post, class: "btn btn-primary" %>
   <% end %>

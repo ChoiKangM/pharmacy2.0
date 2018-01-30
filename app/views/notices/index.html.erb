@@ -32,7 +32,7 @@
         <%= link_to n.title, notice_path(n) %>
       </div>
       <div class="col-4 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
-        <%= n.user.nickname %>
+        <%= n.user.name %>
       </div>
       <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <%= distance_of_time_in_words(n.created_at,Time.now) %> 전

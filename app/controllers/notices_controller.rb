@@ -32,7 +32,7 @@ class NoticesController < ApplicationController
     params.require(:notice).permit(:title,:content,:user_id)
   end
   def user_params
-    params.require(:user).permit(:nickname, :email)
+    params.require(:user).permit(:name, :email)
   end
   def find_notice
     @notice = Notice.find(params[:id])

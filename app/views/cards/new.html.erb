@@ -1,21 +1,18 @@
 <div class="container my-4">
-  <div class="card">
-    <div class="card-header row px-2 py-4 mx-0">
-      <h2 class="col-md-8 col-12"><%= @card.title %></h2>
-      <h4 class="col-md-2 col-6"><%= @card.user.nickname %></h4>
-      <h4 class="col-md-2 col-6"><%= distance_of_time_in_words(@card.created_at, Time.now) %> 전</h4>
+  <%= form_for(@card, html: { multipart: true }) do |c| %>
+    <%= c.hidden_field :user_id, value: current_user.id %>
+    <div class="form-group">
+      <%= c.label :title, value: "제목" %>
+      <%= c.text_field :title, class: "form-control" %>
     </div>
-    <div class="card-body">
-      <%= image_tag @card.image, style: 'width:100%; height:auto;' %>
-      <p class="card-text"><%= @card.content %></p>
-      <% if current_user.id == @card.user.id %>
-        <%= link_to fa_icon("pencil 2x"), edit_card_path(@card), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn btn-danger"%>
-      <% end %>
+    <div class="form-group">
+      <%= c.label :content, value: "내용" %>
+      <%= c.text_area :content, class: "form-control", rows: 6 %>
     </div>
-    <div class="card-footer">
-      <%= render 'creplies/creply' %>
-      <%= render 'creplies/creplies' %>
+    <div class="form-group">
+      <%= c.label :image, value: "이미지" %>
+      <%= c.file_field(:image, accept: 'image/*', class: 'form-control', onchange: "picChange(event)") %>
     </div>
-  </div>
+    <%= button_to "게시하기", cards_path, method: :post, class: "btn btn-primary" %>
+  <% end %>
 </div>

@@ -31,7 +31,7 @@
         <%= link_to h.title, handout_path(h) %>
       </div>
       <div class="col-4 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        <%= h.user.nickname %>
+        <%= h.user.name %>
       </div>
       <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <%= distance_of_time_in_words(h.created_at,Time.now) %> 전

@@ -7,8 +7,10 @@
           <a class="mt-2 p-0" href="#" style="font-size: 1.5rem; color: #3d3d3d">FOLLOW US</a>
         </div>
         <div class="col-md-4 mb-2 text-center d-flex flex-row justify-content-center">
-            <%= link_to fa_icon("facebook"), root_path, class: "nav-link footer-link" %>  
-            <%= link_to fa_icon("google"), root_path, class: "nav-link footer-link" %>  
+            <%= link_to fa_icon("facebook"), "https://www.facebook.com/KNUpharmacy/", class: "nav-link footer-link" %>  
+            <%# TODO: 경북대학교 약학대학 tooltip %>
+            <%= link_to fa_icon("google"), "https://www.facebook.com/knupstudent/?hc_ref=ARTIinasJsOf81QztUfKFtV3_j2_lATOhR8y4e7Mv_f3IGGt_Vb3Jb1WUs5oA2ad0wI", class: "nav-link footer-link" %>  
+            <%# TODO: 학생회 tooltip %>
             <%= link_to fa_icon("youtube-play"), root_path, class: "nav-link footer-link" %>
         </div>
         <div class="col-md-2 footer-knup d-flex flex-column">
@@ -19,7 +21,7 @@
         <div class="col-md-4 d-flex flex-row">
           <div class="col-md-6">
             <p>  
-              <%= link_to "개인정보", root_path, class: "nav-link footer-link" %>    
+              <%= link_to "개인정보", "https://edu.google.com/k-12-solutions/privacy-security/?modal_active=none", class: "nav-link footer-link" %>    
             </p>  
             <p class ="m-0">  
               <%= link_to "이용약관", root_path, class: "nav-link footer-link" %>

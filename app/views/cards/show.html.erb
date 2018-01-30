@@ -1,30 +1,24 @@
-<header class="w-100 header">
-    <div class="container h-100 d-flex flex-column justify-content-center">
-      <div class="d-flex flex-row justify-content-between">
-        <h2>커뮤니티</h2>
-        <p align="right">
-          <%= link_to "글쓰기", new_card_path, class: "btn btn-info" %>
-        </p>
-      </div>
+<div class="container my-4">
+  <div class="card">
+    <div class="card-header row px-2 py-4 mx-0">
+      <h2 class="col-md-8 col-12"><%= @card.title %></h2>
+      <h4 class="col-md-2 col-6"><%= @card.user.name %></h4>
+      <h4 class="col-md-2 col-6">
+        <%= distance_of_time_in_words(@card.created_at, Time.now) + " 전"%>
+        <%#= @card.created_at %>
+      </h4>
     </div>
-</header>
-<section class="container my-4 pt-0">
-  <div class="row">
-    <% @cards.each do |c| %>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-2">
-        <div class="card">
-          <%= image_tag(c.image.thumb) %>
-          <div class="card-body">
-            <h4 class="card-title"><%= c.title %></h4>
-            <h6 class="card-subtitle mb-2 text-muted">@<%= c.user.nickname %></h6>
-            <p class="card-text"><%= c.content %></p>
-            <%= link_to "Show", card_path(c), class: "btn btn-primary" %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <div class="card-body">
+      <%= image_tag @card.image, style: 'width:100%; height:auto;' %>
+      <p class="card-text"><%= @card.content %></p>
+      <% if current_user.id == @card.user.id %>
+        <%= link_to fa_icon("pencil 2x"), edit_card_path(@card), class: "btn btn-warning" %>
+        <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn btn-danger"%>
+      <% end %>
+    </div>
+    <div class="card-footer">
+      <%= render 'creplies/creply' %>
+      <%= render 'creplies/creplies' %>
+    </div>
   </div>
-  <div class="d-flex justify-content-center mt-1">
-    <%= paginate @cards, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
-  </div>
-</section>
+</div>

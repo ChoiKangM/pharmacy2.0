@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header row px-2 py-4 mx-0">
       <h2 class="col-md-8 col-12"><%= @notice.title %></h2>
-      <h4 class="col-md-2 col-6"><%= @notice.user.nickname %></h4>
+      <h4 class="col-md-2 col-6"><%= @notice.user.name %></h4>
       <h4 class="col-md-2 col-6"><%= distance_of_time_in_words(@notice.created_at, Time.now) %> 전</h4>
     </div>
     <div class="card-body">

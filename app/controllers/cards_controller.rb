@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :find_card, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   def index
     @cards = Card.order(created_at: :DESC).page(params[:page]).per(16)
   end
@@ -32,7 +32,7 @@ class CardsController < ApplicationController
     params.require(:card).permit(:title, :content, :user_id, :image)
   end
   def user_params
-    params.require(:user).permit(:nickname, :email)
+    params.require(:user).permit(:name, :email)
   end
   def find_card
     @card = Card.find(params[:id])

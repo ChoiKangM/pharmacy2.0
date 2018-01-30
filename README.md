@@ -1099,9 +1099,9 @@ Notice, Handout, Card
 >$ rails g controller Notices index show new edit  
 >$ rails g controller Handouts index show new edit  
 >$ rails g controller Cards index show new edit  
->$ rails g controller Nreply create destroy  
->$ rails g controller Hreply create destroy  
->$ rails g controller Creply create destroy  
+>$ rails g controller Nreplies create destroy  
+>$ rails g controller Hreplies create destroy  
+>$ rails g controller Creplies create destroy  
 >내용 채우자
 
 ###### 뷰
