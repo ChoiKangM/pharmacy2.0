@@ -23,13 +23,18 @@ class User < ApplicationRecord
       # Get the existing user by email if the provider gives us a verified email.
       # If no verified email was provided we assign a temporary email and ask the
       # user to verify it on the next step via UsersController.finish_signup
-
+      
       email_is_verified = auth.info.email || (auth.info.verified || auth.info.verified_email)
-      email = auth.info.email if email_is_verified
+      email = auth.info.email if email_is_verified and auth.info.email.split('@').last.split('.').first == 'knup'
       user = User.where(:email => email).first if email
       #프로필 사진 추가부분
       proimg = auth.info.image
       proimg ? proimg.sub!("https","http") : nil
+      # 여기에 오류 페이지 설정?
+      if email.nil?
+        raise 'nil returned'
+      end
+      
       # Create the user if it's a new registration
       if user.nil?
         user = User.new(
