@@ -40,6 +40,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
+gem 'sqlite3'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -58,7 +60,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  
 end
 
 group :development do
@@ -70,12 +72,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails_db'
 end
-group :production do
-  # Use sqlite3 as the database for Active Record
-  # gem 'mysql2'
-  gem 'pg', '0.21.0'
-  gem 'rails_12factor'
-end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
