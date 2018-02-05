@@ -262,12 +262,12 @@ img::-moz-selection{
     }
     #mainNav.navbar-shrink .navbar-brand{
         font-size:1.25em;
-        padding:12px 0
+        padding:12px 0;
     }
 }
 header.masthead{
     text-align:center;
-    color: #f8f9fa;
+    color: #212529;
     background: url(asset-path('introductions/1_2.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -448,7 +448,7 @@ section.attendance{
     text-align:center;
     color: #f8f9fa;
     height: 600px;
-    background: #6c757d;
+    background: url(asset-path('introductions/section11.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
