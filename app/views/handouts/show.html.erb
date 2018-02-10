@@ -12,7 +12,7 @@
       <p class="card-text"><%= @handout.content.html_safe %></p>
       <% if current_user.id == @handout.user.id %>
         <%= link_to fa_icon("pencil 2x"), edit_handout_path(@handout), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), handout_path(@handout), method: :delete, class: "btn btn-danger"%>
+        <%= link_to fa_icon("trash-o 2x"), handout_path(@handout), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
       <% end %>
     </div>
     <div class="card-footer">

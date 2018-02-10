@@ -7,7 +7,7 @@
       <%= distance_of_time_in_words(n.created_at,Time.now) %> 전
     </p>
     <p class="col-6 col-md-2 mb-0 d-flex align-items-center">
-      <%= link_to fa_icon("trash 2x"), card_creply_path(@card,n), method: :delete, class: "btn btn-outline-danger" %>
+      <%= link_to fa_icon("trash 2x"), card_creply_path(@card,n), method: :delete, class: "btn btn-outline-danger",data:{confirm: "진짜 삭제합니까?"} %>
     </p>
   </div>
 <% end %>

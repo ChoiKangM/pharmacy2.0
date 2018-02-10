@@ -14,18 +14,33 @@ class CardsController < ApplicationController
     @card = Card.new
   end
   def create
-    @card = Card.create(card_params)
-    redirect_to cards_path
+    if @card = Card.create(card_params)
+      flash['success'] = '게시글이 작성되었습니다.'
+      redirect_to card_path(@card)
+    else
+      flash['danger'] = '글쓰기 실패. 다시 작성하세요'
+      redirect_to new_card_path
+    end
   end
   def edit
   end
   def update
-    @card.update(card_params)
-    redirect_to card_path
+    if @card.update(card_params)
+      flash['success'] = '게시글이 수정되었습니다.'
+      redirect_to card_path(params[:id])
+    else
+      flash['danger'] = '수정 실패. 다시 시도하세요'
+      redirect_to edit_card_path(params[:id])
+    end
   end
   def destroy
-    @card.destroy  
-    redirect_to cards_path
+    if @card.destroy  
+      flash['alert'] = '게시글이 삭제되었습니다.'
+      redirect_to cards_path
+    else
+      flash['alert'] = '삭제 실패. 다시 시도하세요'
+      redirect_to card_path(@card)
+    end
   end
   private
   def card_params

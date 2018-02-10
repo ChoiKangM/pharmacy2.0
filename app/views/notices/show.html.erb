@@ -9,7 +9,7 @@
       <p class="card-text"><%= @notice.content.html_safe %></p>
       <% if current_user.id == @notice.user.id %>
         <%= link_to fa_icon("pencil 2x"), edit_notice_path(@notice), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), notice_path(@notice), method: :delete, class: "btn btn-danger"%>
+        <%= link_to fa_icon("trash-o 2x"), notice_path(@notice), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
       <% end %>
     </div>
     <div class="card-footer">

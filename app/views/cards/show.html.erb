@@ -13,7 +13,7 @@
       <p class="card-text"><%= @card.content %></p>
       <% if current_user.id == @card.user.id %>
         <%= link_to fa_icon("pencil 2x"), edit_card_path(@card), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn btn-danger"%>
+        <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
       <% end %>
     </div>
     <div class="card-footer">
