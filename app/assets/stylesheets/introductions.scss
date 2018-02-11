@@ -364,6 +364,56 @@ header.mainEventHead .intro-text .intro-heading{
 }
 
 
+header.pharmacyIntro{
+    text-align:center;
+    color: #212529;
+    background: url(asset-path('introductions/section9.jpg')) no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+header.pharmacyIntro .intro-text{
+    padding-top:100px;
+    padding-bottom:100px
+}
+header.pharmacyIntro .intro-text .intro-lead-in{
+    font-size:22px;
+    font-style:italic;
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+header.pharmacyIntro .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    header.pharmacyIntro .intro-text{
+        padding-top:200px;
+        padding-bottom:200px
+    }
+    header.pharmacyIntro .intro-text .intro-lead-in{
+        font-size:40px;
+        font-style:italic;
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    header.pharmacyIntro .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
 
 section.studentActivity{
     text-align:center;

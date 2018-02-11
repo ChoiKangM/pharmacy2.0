@@ -4,15 +4,19 @@ class IntroductionsController < ApplicationController
   
   def main
     # A - 메인 페이지
+    # ok
   end
   def mainEvent
     # A1 - Event
+    # ok
   end
   def privacyInformation
     # A3 - 개인정보
+    # 어디꺼??
   end
   def agreeOfUtil
     # A4 - 이용 약관
+    # 어디꺼??
   end
   
   def introduction
