@@ -19,7 +19,7 @@
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to image_tag(current_user.proimg, height: '32', width: '32',class: "img-circular") + " " + current_user.name, user_information_path, class: "nav-link" %>
+          <%= link_to image_tag(current_user.proimg, height: '32', width: '32',class: "img-circular") + " " + current_user.name, userInformation_path, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">
