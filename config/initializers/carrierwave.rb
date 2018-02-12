@@ -7,5 +7,5 @@ CarrierWave.configure do |config|
     aws_secret_access_key: "#{ENV['AWS_SECRET']}",                        # required
     region:                'ap-southeast-1',                  # optional, defaults to 'us-east-1'
   }
-  config.fog_directory  = 'knup-production'                                   # required
+  config.fog_directory  = 'knup2.0-development'                                   # required
 end
