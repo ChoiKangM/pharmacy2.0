@@ -1,4 +1,5 @@
 class IntroductionsController < ApplicationController
+  before_action :authenticate_user!, only: [:attendance,:operationCommittee]
   def userInformation
   end
   
@@ -24,6 +25,7 @@ class IntroductionsController < ApplicationController
   end
   def alumni
     # B1 - 동창회
+    # main이랑 겹친다
   end
   def studentActivity
     # B2 = 학생활동 or 학생생활
