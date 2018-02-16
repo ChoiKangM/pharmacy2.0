@@ -15,7 +15,7 @@ class CardsController < ApplicationController
   end
   def create
     @card = Card.new(card_params)
-    if @card.save
+    if @card.save!
       flash['success'] = '게시글이 작성되었습니다.'
       redirect_to card_path(@card)
     else
