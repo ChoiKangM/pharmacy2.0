@@ -1,18 +1,35 @@
 <!-- Header -->
-<header class="pharmacyIntro">
-  <div class="container d-flex align-items-center justify-content-center text-white">
-    <div class="intro-text">
-      <div class="intro-lead-in">
-        <p>소개합니다</p>
-      </div>
-      <div class="intro-heading text-uppercase">
-        약학대학
-      </div>
+<!--<header class="pharmacyIntro">-->
+<!--  <div class="container d-flex align-items-center justify-content-center">-->
+<!--    <div class="intro-text">-->
+<!--      <div class="intro-lead-in">-->
+<!--        <h3>-->
+<!--          2011년 3월, 경북대학교에 신설된 약학대학으로-->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          보편적 윤리의식을 바탕으로-->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          약학 분야의 발전에 기여하는 -->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          창의적 약학 인재의 양성을-->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          지향하고 있습니다. 지역 최고의 약대로 발돋움 위해 -->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          학내 구성원이  각 분야에서 열심히 활동하고 있습니다.  현재  4회  졸업생을 두고있으며-->
+<!--        </h3>-->
+<!--        <h3>-->
+<!--          사회 각 분야에  진출하여 활발히 활동을 하고 있습니다.-->
+<!--        </h3>-->
+<!--      </div>-->
       <!--<a class="btn btn-info btn-xl text-uppercase" href="https://goo.gl/forms/OF0eOYFT295BvdOq1">신입생 등록하기</a>-->
-      <%= link_to "학교 홈페이지", "http://pharmacy.knu.ac.kr/",target: "_blank", class: "btn btn-info btn-xl text-uppercase" %>
-    </div>
-  </div>
-</header>
+<!--      <%= link_to "학교 홈페이지", "http://pharmacy.knu.ac.kr/",target: "_blank", class: "btn btn-info btn-xl text-uppercase" %>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</header>-->
 
 <!-- Services -->
 <section id="services">
@@ -62,24 +79,24 @@
   </ol>
   <div class="carousel-inner h-100">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="/introCarousel/exercise.jpg" alt="First slide" data-holder-rendered="true">
+      <img class="d-block w-100" src="/introCarousel/experiment.jpg" alt="First slide" data-holder-rendered="true">
       <div class="carousel-caption d-block">
-        <h2>운동회</h2>
-        <h4>여러 약대와 경쟁합니다</h4>
+        <h2>학부교육</h2>
+        <h4>창의적 약학 인재의 양성</h4>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/introCarousel/experiment.jpg" alt="Second slide">
+      <img class="d-block w-100" src="/introCarousel/journey.jpg" alt="Second slide">
       <div class="carousel-caption d-block">
-        <h2>화학실험</h2>
-        <h4>내가 바로 약사다</h4>
+        <h2>학생활동</h2>
+        <h4>학내 동아리, 빌리지, 동번제</h4>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/introCarousel/journey.jpg" alt="Third slide">
+      <img class="d-block w-100" src="/introCarousel/exercise.jpg" alt="Third slide">
       <div class="carousel-caption d--block">
-        <h2>여행</h2>
-        <h4>교수님과 즐거운(?) 여행</h4>
+        <h2>청약체전</h2>
+        <h4>대구, 경북권 체육대회</h4>
       </div>
     </div>
   </div>
@@ -349,15 +366,30 @@
 </div>
 <!--Modal end-->
 
+ <!--alumni -->
+<section class="alumni d-flex align-items-center justify-content-center bg-white">
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="intro-text">
+      <div class="intro-heading text-uppercase">
+        <img src="../graduation.png">
+      </div>
+      <div class="intro-lead-in">
+        <p></p>
+      </div>
+      <a class="btn btn-info btn-xl text-uppercase"href="/introductions/alumni">총동창회</a>
+    </div>
+  </div>
+</section>
+
 <!-- attendance -->
 <section class="attendance d-flex align-items-center justify-content-center">
   <div class="container d-flex align-items-center justify-content-center">
     <div class="intro-text">
-      <div class="intro-lead-in">
-        <p>가보자</p>
-      </div>
       <div class="intro-heading text-uppercase">
-        회원소개
+        <img src="../magnifier.png" height="128px">
+      </div>
+      <div class="intro-lead-in">
+        <p></p>
       </div>
       <%#= TODO: 회원소개 링크 연결 %>
       <a class="btn btn-info btn-xl text-uppercase" href="/introductions/attendance">회원소개</a>

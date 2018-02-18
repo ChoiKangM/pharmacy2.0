@@ -294,7 +294,7 @@ header.mainEventHead .intro-text .intro-heading{
 header.pharmacyIntro{
     text-align:center;
     color: #212529;
-    background: url(asset-path('introductions/pizza1.jpg')) no-repeat center center;
+    background: url(asset-path('introductions/section9.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -340,6 +340,57 @@ header.pharmacyIntro .intro-text .intro-heading{
     }
 }
 
+header.alumni{
+    height: 600px;
+    text-align:center;
+    color: #212529;
+    background: url(asset-path('introductions/alumnus.png')) no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+header.alumni .intro-text{
+    padding-top:100px;
+    padding-bottom:100px
+}
+header.alumni .intro-text .intro-lead-in{
+    font-size:22px;
+    font-style:italic;
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+header.alumni .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    header.alumni .intro-text{
+        padding-top:200px;
+        padding-bottom:200px
+    }
+    header.alumni .intro-text .intro-lead-in{
+        font-size:40px;
+        font-style:italic;
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    header.alumni .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
 
 
 section.studentActivity{
@@ -354,7 +405,7 @@ section.studentActivity{
     background-size:cover
 }
 section.studentActivity .intro-text .intro-lead-in{
-    font-size:22px;
+    font-size:18px;
     font-style:italic;
     line-height:22px;
     margin-bottom:25px;
@@ -428,12 +479,55 @@ section.prepareGraduate .intro-text .intro-heading{
 }
 
 
+section.club{
+    text-align:center;
+    color:#212529;
+    height: 600px;
+    background: url(asset-path('introductions/2_2.jpg')) no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.club .intro-text .intro-lead-in{
+    font-size:22px;
+    font-style:italic;
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.club .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.club .intro-text .intro-lead-in{
+        font-size:40px;
+        font-style:italic;
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.club .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
 
 section.alumni{
     text-align:center;
     color:#212529;
     height: 600px;
-    background: url(asset-path('introductions/2_2.jpg')) no-repeat center center;
+    background: light no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -476,7 +570,7 @@ section.attendance{
     text-align:center;
     color: #f8f9fa;
     height: 600px;
-    background: url(asset-path('introductions/section11.jpg')) no-repeat center center;
+    background: white no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -550,6 +644,89 @@ section.village .intro-text .intro-heading{
         font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
     }
     section.village .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+section.alumniContact{
+    text-align:center;
+    color:#212529;
+    height: 600px;
+    background: url(asset-path('introductions/love1.jpg')) no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.alumniContact .intro-text .intro-lead-in{
+    font-size:22px;
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.alumniContact .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.alumniContact .intro-text .intro-lead-in{
+        font-size:40px;
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.alumniContact .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+
+section.scholarship{
+    text-align:center;
+    color:#212529;
+    height: 600px;
+    background: #f8f9fa no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.scholarship .intro-text .intro-lead-in{
+    font-size:22px;
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.scholarship .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.scholarship .intro-text .intro-lead-in{
+        font-size:40px;
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.scholarship .intro-text .intro-heading{
         font-size:75px;
         font-weight:700;
         line-height:75px;

@@ -22,4 +22,6 @@ class HelpsController < ApplicationController
   def contactUs
     # G - contact us
   end
+  def privacy
+  end
 end

@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get '/helps/makePublic', as: 'makePublic'
   get '/helps/knupManager', as: 'knupManager'
   
+  
   # G
   get '/helps/contactUs', as: 'contactUs'
 end
