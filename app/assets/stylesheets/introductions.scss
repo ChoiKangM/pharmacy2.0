@@ -195,6 +195,7 @@ img::-moz-selection{
 header.masthead{
     text-align:center;
     color: #212529;
+    height: 750px;
     background: url(asset-path('introductions/1_2.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -394,7 +395,7 @@ header.alumni .intro-text .intro-heading{
 section.studentActivity{
     text-align:center;
     color:#212529;
-    height: 600px;
+    height: 750px;
     background: url(asset-path('introductions/5_2.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -437,7 +438,7 @@ section.studentActivity .intro-text .intro-heading{
 section.prepareGraduate{
     text-align:center;
     color:#212529;
-    height: 600px;
+    height: 750px;
     background: url(asset-path('introductions/4_2.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -480,7 +481,7 @@ section.prepareGraduate .intro-text .intro-heading{
 section.club{
     text-align:center;
     color:#212529;
-    height: 600px;
+    height: 750px;
     background: url(asset-path('introductions/2_2.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -516,6 +517,182 @@ section.club .intro-text .intro-heading{
         font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
     }
 }
+
+
+section.help-question{
+    text-align:center;
+    color:#212529;
+    height: 900px;
+    background: #f8f9fa no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.help-question .intro-text .intro-lead-in{
+    font-size:22px;
+    
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.help-question .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.help-question .intro-text .intro-lead-in{
+        font-size:32px;
+        
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.help-question .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+section.help-makePublic{
+    text-align:right;
+    color:#212529;
+    height: 900px;
+    background: #ffffff no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.help-makePublic .intro-text .intro-lead-in{
+    font-size:22px;
+    
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.help-makePublic .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.help-makePublic .intro-text .intro-lead-in{
+        font-size:32px;
+        
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.help-makePublic .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+
+section.help-payment{
+    text-align:right;
+    color:#212529;
+    height: 900px;
+    background: #f8f9fa no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.help-payment .intro-text .intro-lead-in{
+    font-size:22px;
+    
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.help-payment .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.help-payment .intro-text .intro-lead-in{
+        font-size:32px;
+        
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.help-payment .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+section.help-knupManager{
+    text-align:left;
+    color:#212529;
+    height: 900px;
+    background: #f8f9fa no-repeat center center;
+    background-attachment:scroll;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover
+}
+section.help-knupManager .intro-text .intro-lead-in{
+    font-size:22px;
+    
+    line-height:22px;
+    margin-bottom:25px;
+    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+section.help-knupManager .intro-text .intro-heading{
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+    margin-bottom:25px;
+    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+@media (min-width:768px){
+    section.help-knupManager .intro-text .intro-lead-in{
+        font-size:32px;
+        
+        line-height:40px;
+        margin-bottom:25px;
+        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    section.help-knupManager .intro-text .intro-heading{
+        font-size:75px;
+        font-weight:700;
+        line-height:75px;
+        margin-bottom:50px;
+        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+}
+
+
+
 
 
 
@@ -609,7 +786,7 @@ section.attendance .intro-text .intro-heading{
 section.village{
     text-align:center;
     color:#212529;
-    height: 500px;
+    height: 750px;
     background: url(asset-path('introductions/3_2.png')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -663,7 +840,7 @@ section.village .intro-text .intro-heading{
 section.community{
     text-align:center;
     color:#212529;
-    height: 500px;
+    height: 750px;
     background: url(asset-path('introductions/section11.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;

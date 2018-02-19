@@ -1,5 +1,5 @@
 class HelpsController < ApplicationController
-  
+  before_action :authenticate_user!, except: [:help, :contactUs]
   def help
     # F1 - help
   end
