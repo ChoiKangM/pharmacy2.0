@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
+  validate :knup_login
   TEMP_EMAIL_PREFIX = 'jongwon@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
 
@@ -30,20 +31,24 @@ class User < ApplicationRecord
       #프로필 사진 추가부분
       proimg = auth.info.image
       proimg ? proimg.sub!("https","http") : nil
-      # 여기에 오류 페이지 설정?
-      if email.nil?
-        raise 'nil returned'
-      end
+      # knup.co.kr 계정으로만 로그인
       
       # Create the user if it's a new registration
       if user.nil?
         user = User.new(
           name: auth.info.name || auth.extra.nickname ||  auth.uid,
-          email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
+          email: email ,
           proimg: proimg ? proimg : "null",
           password: Devise.friendly_token[0,20]
         )
+        
+        
+        
+        # 에베베베 안되지롱
         user.save!
+
+
+
 
       end
     end
@@ -57,7 +62,11 @@ class User < ApplicationRecord
     user
 
   end
-
+  def knup_login
+    if email.nil?
+      self.errors.add(:email, "knup.co.kr 계정으로만 로그인 가능합니다")
+    end
+  end
   def email_required?
     false
   end
