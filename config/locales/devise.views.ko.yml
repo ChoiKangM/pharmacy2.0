@@ -71,7 +71,7 @@ ko:
         subject: "잠금 해제 안내"
     omniauth_callbacks:
       failure: "%{reason}(으)로 인하여 %{kind}(으)로부터 인증받지 못했습니다."
-      success: "%{kind} 계정으로부터 인증되었습니다."
+      success: "성공적으로 로그인 되었습니다."
     passwords:
       edit:
         change_my_password: "내 비밀번호를 변경합니다"
