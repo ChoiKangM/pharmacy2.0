@@ -13,7 +13,7 @@
 |:------:|:-------:|:-------:|:-------:|:---------:|------------|---------|-----------|------------|---------|----------|------------|
 | Record |  title  |  title  |  title  |           |            |         | number    | number     | number  | nickname | title,content|
 |        | content | content | content |  content  | content    | content |           |            |         | email    | information|
-|        | user_id | user_id | user_id |  user_id  | user_id    | user_id | user_id   | user_id    | user_id | password |     type   |
+|        | user_id | user_id | user_id |  user_id  | user_id    | user_id | user_id   | user_id    | user_id | password |     kind   |
 |        |         |   file  |  image  | notice_id | handout_id | card_id | notice_id | handout_id | card_id |          | user_id    |
 
 정보공개 게시판의 경우  

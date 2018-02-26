@@ -1,8 +1,27 @@
+<header class="makePublic d-flex align-items-center">
+  <div class="container">
+    <div class="intro-text align-items-start">
+      <div class="intro-heading">
+        <a href="/make_publics">정보공개</a>
+      </div>
+    </div>
+    <div class="intro-text justify-content-end">
+      <div class="intro-lead-in justify-content-end">
+        <p class="ml-auto" style="text-align: right;">
+          <a class="" href="/make_publics/meeting">회의록</a> |
+          <a class="" href="/make_publics/account">회계자료</a> |
+          <a class="" href="/make_publics/other">기타</a> |
+          <a class="" href="/make_publics/rule">운영규정</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
 <div class="container mt-5 table-reponsive" style="min-height: 900px">
-  <h3 class="text-center">운영규정</h3>
+  <h3 class="text-center mb-4">기타</h3>
   <table class="table table-hover">
     <thead>
-      <tr>
+      <tr >
         <th scope="col">#</th>
         <th scope="col">제목</th>
         <th scope="col">작성자</th>
@@ -11,7 +30,7 @@
     </thead>
     <tbody>
       <% @other.each do |m| %>
-        <tr>
+        <tr data-link="<%= make_public_path(m) %>">
           <th scope="row">
             <% if @page == 0 %>
               <%= @other_length - @other.index(m) %>
@@ -30,3 +49,8 @@
     <%= paginate @other, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
   </div>
 </div>
+<script>
+  $("tr[data-link]").click(function() {
+    window.location = $(this).data("link")
+  })
+</script>

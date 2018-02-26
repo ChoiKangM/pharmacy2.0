@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "account"
       get "other"
       get "rule"
+      get "make_public"
     end
   end
   

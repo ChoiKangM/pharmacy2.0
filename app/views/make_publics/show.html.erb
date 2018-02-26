@@ -1,2 +1,26 @@
-<h1>MakePublics#show</h1>
-<p>Find me in app/views/make_publics/show.html.erb</p>
+<div class="container my-5 pb-5">
+  <div class="card">
+    <div class="card-header row px-2 py-4 mx-0">
+      <h2 class="col-sm-12"><%= @make_public.title %></h2>
+      <h4 class="col-sm-6"><%= @make_public.kind %></h4>
+      <h4 class="col-sm-6"><%= @make_public.user.name %></h4>
+      <h4 class="col-sm-12">
+        <%= @make_public.created_at.to_s.delete('UTC') %>
+      </h4>
+    </div>
+    <div class="card-body">
+      <p class="card-text" align="right">
+        <%= link_to fa_icon("download 2x"), @make_public.information.url, class: "btn btn-primary" %>
+      </p>
+      <p class="card-text"><%= @make_public.content.html_safe %></p>
+      <% if current_user.id == @make_public.user.id %>
+        <%= link_to fa_icon("pencil 2x"), edit_make_public_path(@make_public), class: "btn btn-warning" %>
+        <%= link_to fa_icon("trash-o 2x"), make_public_path(@make_public), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
+      <% end %>
+    </div>
+    <div class="card-footer">
+      <%#= render 'hreplies/hreply' %>
+      <%#= render 'hreplies/hreplies' %>
+    </div>
+  </div>
+</div>
