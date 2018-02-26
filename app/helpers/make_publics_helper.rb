@@ -1,0 +1,2 @@
+module MakePublicsHelper
+end

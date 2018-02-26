@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">제목</th>
+      <th scope="col">작성자</th>
+      <th scope="col">시간</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @make_publics.each do |m| %>
+      <tr>
+        <th scope="row"><%= m.id %></th>
+        <td><%= m.title %></td>
+        <td><%= m.user.name %></td>
+        <td><%= m.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

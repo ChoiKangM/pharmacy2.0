@@ -1,0 +1,33 @@
+<div class="container my-4">
+  <%= form_for(@make_public, html: { multipart: true }) do |h| %>
+    <%= h.hidden_field :user_id, value: current_user.id %>
+    <div class="form-group">
+      <%= h.label :kind, value: "정보공개" %><br/>
+      <%#= h.select :kind, ['회의록', '회계자료','기타','운영규정'] %>
+      <%#= h.select :kind, options_for_select(@countries.map{ |c| [c.name, c.id, {'data-currency_code'=>c.currency_code}] }) %>
+      <%= h.radio_button :kind, '회의록', :checked => true %>
+      <%= label :kind, '회의록 ' %>
+      <%= h.radio_button :kind, '회계자료' %>
+      <%= label :king, '회계자료 ' %>
+      <%= h.radio_button :kind, '기타' %>
+      <%= label :king, '기타 ' %>
+      <%= h.radio_button :kind, '운영규정' %>
+      <%= label :king, '운영규정 ' %>
+    </div>
+    <div class="form-group">
+      <%= h.label :information, value: "자료뮬" %>
+      <%= h.file_field(:information, class: 'form-control') %>
+    </div>
+    <div class="form-group">
+      <%= h.label :title, value: "제목" %>
+      <%= h.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= h.label :content, value: "내용" %>
+      <%= h.text_area :content, class: "tinymce", :rows => 15, :cols => 120 %>
+      <%= tinymce %>
+    </div>
+    
+    <%= button_to "수정하기", handouts_path, method: :patch, class: "btn btn-primary" %>
+  <% end %>
+</div>

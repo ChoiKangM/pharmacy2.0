@@ -1,5 +1,31 @@
 경북대 약학대학 커뮤니티 만들기
 ===================================
+구조
+------------
+### message board -> mboard
+### card board -> cboard
+
+게시글은 액션 7개    
+리플은 액션 2개  
+
+
+|  Model |  Notice | Handout |   Card  |   Nreply  | Hreply     | Creply  | Nlike     | Hlike      | Clike   | User     | makePublic |
+|:------:|:-------:|:-------:|:-------:|:---------:|------------|---------|-----------|------------|---------|----------|------------|
+| Record |  title  |  title  |  title  |           |            |         | number    | number     | number  | nickname | title,content|
+|        | content | content | content |  content  | content    | content |           |            |         | email    | information|
+|        | user_id | user_id | user_id |  user_id  | user_id    | user_id | user_id   | user_id    | user_id | password |     type   |
+|        |         |   file  |  image  | notice_id | handout_id | card_id | notice_id | handout_id | card_id |          | user_id    |
+
+정보공개 게시판의 경우  
+번호랑 일자(연도까지) 작성자가 있어야한다
+
+| meeting   | title | content | file | user_id |
+|----------|-------|---------|------|---------|
+| account | title | content | file | user_id |
+| other     | title | content | file | user_id |
+| rule | title | content | file | user_id |
+
+
 사용하는 Gem
 ------------
 ```
@@ -1156,6 +1182,7 @@ Notice, Handout, Card
 >$ rails g model Nreply content:text user:belongs_to notice:belongs_to  
 >$ rails g model Hreply content:text user:belongs_to handout:belongs_to  
 >$ rails g model Creply content:text user:belongs_to card:belongs_to 
+>$ rails g model makePublic title:string content:text information:string user:belongs_to type:string
 
 ###### 컨트롤러
 >$ rails g controller Notices index show new edit  
@@ -1164,6 +1191,7 @@ Notice, Handout, Card
 >$ rails g controller Nreplies create destroy  
 >$ rails g controller Hreplies create destroy  
 >$ rails g controller Creplies create destroy  
+>$ rails g controller makePublics index show new edit
 >내용 채우자
 
 ###### 뷰

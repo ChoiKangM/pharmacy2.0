@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :make_publics do
+     collection do
+      get "meeting" # generate  get "/make_publics/meeting"
+      get "account"
+      get "other"
+      get "rule"
+    end
+  end
+  
   resources :cards do
     resources :creplies, only: [:create, :destroy]
   end
@@ -31,7 +40,13 @@ Rails.application.routes.draw do
   get '/helps/question', as: 'question'
   get '/helps/tier', as: 'tier'
   get '/helps/payment', as: 'payment'
+  
   get '/helps/makePublic', as: 'makePublic'
+  #get '/makePublic/meeting', as: 'meeting'
+  #get '/makePublic/account', as: 'account'
+  #get '/makePublic/other', as: 'other'
+  #get '/makePublics/rule', as: 'rule'
+  
   get '/helps/knupManager', as: 'knupManager'
   
   
