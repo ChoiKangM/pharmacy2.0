@@ -2,21 +2,24 @@
 <html>
   <head>
     <title>KNUP</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="description" content="경북대학교 약학대학 학생 커뮤니티" />
+    <link rel="canonical" href="http://www.knup.co.kr">
+    <meta name="robots" content="index,nofollow">
     <meta property="og:title" content="KNUP">
-    <meta property="og:image" content="../councils/KNUP.jpg">
+    <meta property="og:image" content="http://www.knup.co.kr/councils/KNUP.jpg">
     <meta property="og:description" content="경북대학교 약학대학 학생 커뮤니티">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.knup.co.kr">`
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="medicine2.png" type="image/gif" sizes="16x16">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= render 'layouts/header' %>
+    <div style="height: 74px;"></div>
     <%= render 'layouts/flash_message' %>
     <%= yield %>
     <%= render 'layouts/footer' %>

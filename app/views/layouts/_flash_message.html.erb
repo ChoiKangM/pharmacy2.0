@@ -1,4 +1,6 @@
 <% flash.each do |msg_type, msg| %>
   <% type = bootstrap_msg(msg_type) %>
-  <%= content_tag(:div, msg, class: "container alert alert-#{type} mt-4") %>
+  <div class="container">
+    <%= content_tag(:div, msg, class: "alert alert-#{type} mt-4") %>
+  </div>
 <% end %>

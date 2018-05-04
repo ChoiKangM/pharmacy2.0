@@ -345,12 +345,12 @@ header.alumni{
     height: 600px;
     text-align:center;
     color: #212529;
-    background: url(asset-path('introductions/alumnus.png')) no-repeat center center;
+    background: url(asset-path('introductions/graduation.JPG')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
-    background-size:cover
+    background-size:cover;
 }
 header.alumni .intro-text{
     padding-top:100px;
@@ -440,7 +440,7 @@ header.studentActivity{
     text-align:center;
     color:#212529;
     height: 500px;
-    background: url(asset-path('introductions/5_2.jpg')) no-repeat center center;
+    background: url(asset-path('introductions/studentActivity.JPG')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -884,7 +884,9 @@ section.village{
     text-align:center;
     color:#212529;
     height: 750px;
-    background: url(asset-path('introductions/3_2.png')) no-repeat center center;
+    background-image: url(asset-path('introductions/village.JPG'));
+    background-repeat: no-repeat;
+    background-position: center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
     -moz-background-size:cover;

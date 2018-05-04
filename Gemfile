@@ -14,7 +14,7 @@ gem 'omniauth-naver'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-kakao'
 
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap', '~> 4.1.0'
 gem "font-awesome-rails"
 gem 'tinymce-rails'
 
