@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" id="KNUPNav">
+  <%= link_to "KNUP", root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto" id="myTab" role="tablist">
+      <li class="nav-item">
+        <%#= link_to "소개", introduction_path, class: "nav-link" %>
+        <div class="dropdown">
+          <button class="dropbtn">소개</button>
+          <div class="dropdown-content">
+            <a href="#">about KNUP</a>
+            <a href="#">학생생활</a>
+            <a href="#">빌리지</a>
+            <a href="#">동아리</a>
+            <a href="#">총동창회</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%#= link_to "공지사항", notices_path, class: "nav-link" %>
+        <div class="dropdown">
+          <button class="dropbtn">커뮤니티</button>
+          <div class="dropdown-content">
+            <a href="#">뉴스룸</a>
+            <a href="#">KNUP Story</a>
+            <a href="#">학습자료실</a>
+            <a href="#">동번제</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%#= link_to "학습자료실", handouts_path, class: "nav-link" %>
+        <div class="dropdown">
+          <button class="dropbtn">자치운영</button>
+          <div class="dropdown-content">
+            <a href="#">문의하기</a>
+            <a href="#">정보공개</a>
+            <a href="#">홈페이지 수정</a>
+            <a href="#">동창회비 납부</a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%#= link_to "동번제", cards_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%#= link_to "자치운영", help_path, class: "nav-link" %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to image_tag(current_user.proimg, height: '32', width: '32',class: "img-circular") + " " + current_user.name, userInformation_path, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", user_google_oauth2_omniauth_authorize_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

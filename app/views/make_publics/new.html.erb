@@ -1,3 +1,4 @@
+<%#= TODO: 파일 업로도 여러개  %>
 <div class="container my-4">
   <%= form_for(@make_public, html: { multipart: true }) do |h| %>
     <%= h.hidden_field :user_id, value: current_user.id %>
@@ -29,6 +30,6 @@
       <%= tinymce %>
     </div>
     
-    <%= button_to "게시하기", handouts_path, method: :post, class: "btn btn-primary" %>
+    <%= button_to "게시하기", make_publics_path, method: :post, class: "btn btn-primary" %>
   <% end %>
 </div>

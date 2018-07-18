@@ -11,6 +11,7 @@ class HelpsController < ApplicationController
   end
   def payment
     # F4 - 총창회비 납부 확인
+    # alumnusfees_path에서 확인합시다
   end
   def makePublic
     # F5 - 정보 공개

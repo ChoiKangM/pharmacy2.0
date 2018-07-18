@@ -1,22 +1,29 @@
 <div class="container my-4">
   <div class="card">
-    <div class="card-header row px-2 py-4 mx-0">
-      <h2 class="col-md-8 col-12"><%= @card.title %></h2>
-      <h4 class="col-md-2 col-6"><%= @card.user.name %></h4>
-      <h4 class="col-md-2 col-6">
-        <%= distance_of_time_in_words(@card.created_at, Time.now) + " 전"%>
-        <%#= @card.created_at %>
+    <div class="card-body">
+      <h4 class="d-flex justify-content-between align-items-center text-weight-bold">
+        <%= @card.title %>
+        <div>
+        <% if current_user.id == @card.user.id %>
+          <%= link_to fa_icon("pencil 2x"), edit_card_path(@card), class: "btn text-success" %>
+          <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn text-danger",data: {confirm: "진짜 삭제합니까?"}%>
+        <% end %>
+        </div>
       </h4>
+      <div class="d-flex flex-row-reverse">
+        <div class="text-right text-muted ml-1">
+          <h6 class="mb-1"><%= @card.user.name %></h6>
+          <h6 class=""><%= distance_of_time_in_words(@card.created_at, Time.now) %> 전</h6>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <%= image_tag @card.image, class: 'img-fluid' %>
+      </div>
+      <p class="card-text mx-2">
+        <%= @card.content.html_safe %>
+      </p>
     </div>
     <div class="card-body">
-      <%= image_tag @card.image, style: 'width:100%; height:auto;' %>
-      <p class="card-text"><%= @card.content %></p>
-      <% if current_user.id == @card.user.id %>
-        <%= link_to fa_icon("pencil 2x"), edit_card_path(@card), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), card_path(@card), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
-      <% end %>
-    </div>
-    <div class="card-footer">
       <%= render 'creplies/creply' %>
       <%= render 'creplies/creplies' %>
     </div>

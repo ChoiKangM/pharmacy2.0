@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :alumnusfees
+
   resources :make_publics do
      collection do
       get "meeting" # generate  get "/make_publics/meeting"
@@ -33,6 +35,10 @@ Rails.application.routes.draw do
   get '/introductions/village', as: 'village'
   get '/introductions/club', as: 'club'
   get '/introductions/attendance', as: 'attendance'
+  get '/introductions/fifthGrade13', as:'fifthGrade13'
+  get '/introductions/fourthGrade14', as:'fourthGrade14'
+  get '/introductions/thirdGrade15', as:'thirdGrade15'
+  get '/introductions/secondGrade16', as:'secondGrade16'
   get '/introductions/operationCommittee', as: 'operationCommittee'
   
   # F

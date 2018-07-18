@@ -1,21 +1,30 @@
+<%# TODO: TEMPLATE - 첨부파일 게시글 show  %>
 <div class="container my-4">
   <div class="card">
-    <div class="card-header row px-2 py-4 mx-0">
-      <h2 class="col-md-8 col-12"><%= @handout.title %></h2>
-      <h4 class="col-md-2 col-6"><%= @handout.user.name %></h4>
-      <h4 class="col-md-2 col-6"><%= distance_of_time_in_words(@handout.created_at, Time.now) %> 전</h4>
+    <div class="card-body">
+      <h4 class="d-flex justify-content-between align-items-center text-weight-bold">
+        <%= @handout.title %>
+        <div>
+          <% if current_user.id == @handout.user.id %>
+            <%= link_to fa_icon("pencil 2x"), edit_handout_path(@handout), class: "btn text-success" %>
+            <%= link_to fa_icon("trash-o 2x"), handout_path(@handout), method: :delete, class: "btn text-danger",data: {confirm: "진짜 삭제합니까?"}%>
+          <% end %>
+        </div>
+      </h4>
+      <div class="d-flex flex-row-reverse">
+        <div class="text-right text-muted ml-1">
+          <h6 class="mb-1"><%= @handout.user.name %></h6>
+          <h6 class=""><%= distance_of_time_in_words(@handout.created_at, Time.now) %> 전</h6>
+        </div>
+        <div>
+          <%= link_to fa_icon("download 2x"), @handout.file.url, class: "btn text-primary mr-2" %>
+        </div>
+      </div>
+      <p class="card-text mx-2">
+        <%= @handout.content.html_safe %>
+      </p>
     </div>
     <div class="card-body">
-      <p class="card-text" align="right">
-        <%= link_to fa_icon("download 2x"), @handout.file.url, class: "btn btn-primary" %>
-      </p>
-      <p class="card-text"><%= @handout.content.html_safe %></p>
-      <% if current_user.id == @handout.user.id %>
-        <%= link_to fa_icon("pencil 2x"), edit_handout_path(@handout), class: "btn btn-warning" %>
-        <%= link_to fa_icon("trash-o 2x"), handout_path(@handout), method: :delete, class: "btn btn-danger",data: {confirm: "진짜 삭제합니까?"}%>
-      <% end %>
-    </div>
-    <div class="card-footer">
       <%= render 'hreplies/hreply' %>
       <%= render 'hreplies/hreplies' %>
     </div>

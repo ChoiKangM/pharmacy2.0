@@ -21,7 +21,9 @@
     <%= render 'layouts/header' %>
     <div style="height: 74px;"></div>
     <%= render 'layouts/flash_message' %>
-    <%= yield %>
+    <div style="min-height:600px;">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

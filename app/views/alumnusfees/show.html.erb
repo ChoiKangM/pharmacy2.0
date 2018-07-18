@@ -1,0 +1,30 @@
+<div class="container my-4">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="d-flex justify-content-between align-items-center text-weight-bold">
+        <%= @alumnusfee.title %>
+        <div>
+          <% if current_user.id == @alumnusfee.user.id %>
+            <%= link_to fa_icon("pencil 2x"), edit_alumnusfee_path(@alumnusfee), class: "btn text-success" %>
+            <%= link_to fa_icon("trash-o 2x"), alumnusfee_path(@alumnusfee), method: :delete, class: "btn text-danger",data: {confirm: "진짜 삭제합니까?"}%>
+          <% end %>
+        </div>
+      </h4>
+      <div class="d-flex flex-row-reverse">
+        <div class="text-right text-muted ml-1">
+          <h6 class="mb-1"><%= @alumnusfee.user.name %></h6>
+          <h6 class=""><%= distance_of_time_in_words(@alumnusfee.created_at, Time.now) %> 전</h6>
+          <h6><%= @alumnusfee.created_at.to_s.delete('UTC') %></h6>
+        </div>
+        <div>
+          <%= link_to fa_icon("download 2x"), @alumnusfee.account.url, class: "btn text-primary mr-2" %>
+        </div>
+      </div>
+      <p class="card-text mx-2">
+        <%= @alumnusfee.content.html_safe %>
+      </p>
+    </div>
+  </div>
+    
+</div>
+

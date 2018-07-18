@@ -11,6 +11,9 @@
 <section class="container pt-0 mb-4">
   <div class="pt-3 pt-md-4 mt-2">
     <div class="row py-2 bt-gray-1 bb-gray-1 bg-gray-dark d-none d-sm-flex">
+      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+        <h6>#</h6>
+      </div>
       <div class="col-6 col-sm-6 col-lg-8 col-xl-8 mb-1 mb-sm-0 font-size-base-xs-down">
         <h6>제목</h6>
       </div>
@@ -20,13 +23,13 @@
       <div class="col-2 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <h6>날짜</h6>
       </div>
-      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        <h6>조회수</h6>
-      </div>
     </div>
   </div>
   <% @handouts.each do |h| %>
     <div class="row">
+      <div class="col-4 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+        <%= h.id%>
+      </div>
       <div class="col-12 col-sm-5 col-lg-8 col-xl-8 m-0">
         <%= link_to h.title, handout_path(h) %>
       </div>
@@ -35,9 +38,6 @@
       </div>
       <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <%= distance_of_time_in_words(h.created_at,Time.now) %> 전
-      </div>
-      <div class="col-4 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        0명
       </div>
     </div>
   <% end %>

@@ -1,0 +1,11 @@
+<div class="container">
+    <h3 class="text-center my-4">5학년</h3>
+    <div class="row">
+        <% @fifthGrade13.each do |student| %>
+            <div class="col-lg-3 col-sm-4 col-6">
+                <%= image_tag "/assets/fifthGrade13/#{student}" ,class: "img-thumbnail"%>
+                <%= content_tag(:p, "#{student.split('.').first}", class: ["text-muted", "text-center"])%>  
+            </div>
+        <% end %>
+    </div>
+</div>

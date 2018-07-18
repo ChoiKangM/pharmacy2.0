@@ -1,3 +1,4 @@
+<%# TODO: 공지사항, 학습자료실, 동번제를 커뮤니티 탭 하나로 줄이고 커뮤티니에서 각각으로 나누어지는 방향으로 가자%>
 <header class="w-100 header-notices">
     <div class="container h-100 d-flex flex-column justify-content-center">
       <div class="d-flex flex-row justify-content-between">
@@ -8,10 +9,13 @@
       </div>
     </div>
 </header>
-<section class="container pt-0 mb-4">
-  <div class="pt-3 pt-md-4 mt-2">
+<section class="container pt-0 mb-4 mt-xs-3">
+  <div class="pt-xs-5 pt-3 pt-md-4 mt-2">
     <div class="row py-2 bt-gray-1 bb-gray-1 bg-gray-dark d-none d-sm-flex">
-      <div class="col-6 col-sm-5 col-lg-7 col-xl-7 mb-1 mb-sm-0 font-size-base-xs-down">
+      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+        <h6>#</h6>
+      </div>
+      <div class="col-10 col-sm-5 col-lg-7 col-xl-7 mb-1 mb-sm-0 font-size-base-xs-down">
         <h6>제목</h6>
       </div>
       <div class="col-2 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
@@ -20,14 +24,14 @@
       <div class="col-2 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <h6>날짜</h6>
       </div>
-      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        <h6>조회수</h6>
-      </div>
     </div>
   </div>
   <% @notices.each do |n| %>
     <div class="row">
-      <div class="col-12 col-sm-5 col-lg-7 col-xl-7 m-0">
+      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+        <%= n.id %>
+      </div>
+      <div class="col-10 col-sm-5 col-lg-7 col-xl-7 m-0">
         <%= link_to n.title, notice_path(n) %>
       </div>
       <div class="col-4 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
@@ -36,13 +40,9 @@
       <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <%= distance_of_time_in_words(n.created_at,Time.now) %> 전
       </div>
-      <div class="col-4 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        0명
-      </div>
     </div>
   <% end %>
   <div class="d-flex justify-content-center mt-2">
     <%= paginate @notices, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
   </div>
 </section>
-<%# TODO: 조회수 구현합시다 %>
