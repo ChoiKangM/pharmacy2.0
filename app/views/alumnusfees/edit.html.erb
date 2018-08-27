@@ -3,7 +3,7 @@
     <%= h.hidden_field :user_id, value: current_user.id %>
     <div class="form-group">
       <%= h.label :account, value: "회계자료" %>
-      <%= h.file_field(:account, class: 'form-control') %>
+      <%= h.file_field(:accounts, multiple: true,class: 'form-control') %>
     </div>
     <div class="form-group">
       <%= h.label :title, value: "제목" %>

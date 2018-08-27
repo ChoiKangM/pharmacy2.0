@@ -45,7 +45,7 @@ class HandoutsController < ApplicationController
   end
   private
   def handout_params
-    params.require(:handout).permit(:title,:content,:user_id,:file)
+    params.require(:handout).permit(:title,:content,:user_id,{files: []})
   end
   def user_params
     params.require(:user).permit(:name, :email)

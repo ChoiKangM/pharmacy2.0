@@ -7,11 +7,12 @@
     </div>
     <div class="form-group">
       <%= c.label :content, value: "내용" %>
-      <%= c.text_area :content, class: "form-control", rows: 6 %>
+      <%= c.text_area :content, class: "tinymce", :rows => 15, :cols => 120 %>
+      <%= tinymce %>
     </div>
     <div class="form-group">
-      <%= c.label :image, value: "이미지" %>
-      <%= c.file_field(:image, accept: 'image/*', class: 'form-control', onchange: "picChange(event)") %>
+      <%= c.label :images, value: "이미지" %>
+      <%= c.file_field(:images, multiple: true,class: 'form-control') %>
     </div>
     <%= button_to "게시하기", cards_path, method: :post, class: "btn btn-primary" %>
   <% end %>

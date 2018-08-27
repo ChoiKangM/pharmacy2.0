@@ -4,7 +4,7 @@ class CreateCards < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :content
       t.belongs_to :user, foreign_key: true
-      t.string :image
+      t.string :images
 
       t.timestamps
     end

@@ -1,0 +1,8 @@
+toolbar: undo redo | forecolor | bold italic | alignleft aligncenter alignright | styleselect | fontselect | code | link | table |
+plugins:
+  - link
+  - textcolor
+  - code
+  - table
+
+  # uploadimage 넣고 싶은데 안된다 ㅠㅠ

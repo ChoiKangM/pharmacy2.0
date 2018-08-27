@@ -1,3 +1,4 @@
+<%# css는 application.scss, javascript는 없습니다%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" id="KNUPNav">
   <%= link_to "KNUP", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,40 +7,37 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto" id="myTab" role="tablist">
       <li class="nav-item">
-        <%#= link_to "소개", introduction_path, class: "nav-link" %>
         <div class="dropdown">
           <button class="dropbtn">소개</button>
           <div class="dropdown-content">
-            <a href="#">about KNUP</a>
-            <a href="#">학생생활</a>
-            <a href="#">빌리지</a>
-            <a href="#">동아리</a>
-            <a href="#">총동창회</a>
+            <%= link_to "about KNUP", introduction_path %>
+            <%= link_to "학생생활", studentActivity_path%>
+            <%= link_to "빌리지", village_path%>
+            <%= link_to "동아리", club_path%>
+            <%= link_to "총동창회", alumni_path%>
           </div>
         </div>
       </li>
       <li class="nav-item">
-        <%#= link_to "공지사항", notices_path, class: "nav-link" %>
         <div class="dropdown">
           <button class="dropbtn">커뮤니티</button>
           <div class="dropdown-content">
-            <a href="#">뉴스룸</a>
-            <a href="#">KNUP Story</a>
-            <a href="#">학습자료실</a>
-            <a href="#">동번제</a>
+            <%= link_to "뉴스룸", notices_path%>
+            <%= link_to "KNUP Story", "#" %>
+            <%= link_to "학습자료실", handouts_path %>
+            <%= link_to "동번제", cards_path%>
           </div>
         </div>
       </li>
       <li class="nav-item">
-        <%#= link_to "학습자료실", handouts_path, class: "nav-link" %>
         <div class="dropdown">
           <button class="dropbtn">자치운영</button>
           <div class="dropdown-content">
-            <a href="#">문의하기</a>
-            <a href="#">정보공개</a>
-            <a href="#">홈페이지 수정</a>
-            <a href="#">동창회비 납부</a>
-            <a href="#">Contact us</a>
+            <%= link_to "문의하기", help_path%>
+            <%= link_to "정보공개", make_publics_path%>
+            <%= link_to "홈페이지 수정", "https://goo.gl/forms/HrZ2IuKNQHYjtrW32"%>
+            <%= link_to "동창회비 납부", alumnusfees_path%>
+            <%= link_to "Contact us", contactUs_path%>
           </div>
         </div>
       </li>
@@ -55,7 +53,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", user_google_oauth2_omniauth_authorize_path, class: "nav-link" %>
+          <%= button_to "Login", user_google_oauth2_omniauth_authorize_path, class: "dropbtn" %>
         </li>
       <% end %>
     </ul>

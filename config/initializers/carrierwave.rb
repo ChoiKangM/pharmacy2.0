@@ -1,4 +1,5 @@
 require 'carrierwave/orm/activerecord'
+
 if Rails.env.development?
   CarrierWave.configure do |config|
     config.fog_provider = 'fog/aws'                        # required
@@ -23,5 +24,4 @@ elsif Rails.env.production?
   }
     config.fog_directory  = 'knup2.0-production' # production
   end
-
 end

@@ -3,7 +3,7 @@ class CreateMakePublics < ActiveRecord::Migration[5.0]
     create_table :make_publics do |t|
       t.string :title
       t.text :content
-      t.string :information
+      t.string :informations
       t.belongs_to :user, foreign_key: true
       t.string :kind
 

@@ -10,15 +10,15 @@
           <% end %>
         </div>
       </h4>
-      <div class="d-flex flex-row-reverse">
-        <div class="text-right text-muted ml-1">
-          <h6 class="mb-1"><%= @alumnusfee.user.name %></h6>
-          <h6 class=""><%= distance_of_time_in_words(@alumnusfee.created_at, Time.now) %> 전</h6>
-          <h6><%= @alumnusfee.created_at.to_s.delete('UTC') %></h6>
-        </div>
-        <div>
-          <%= link_to fa_icon("download 2x"), @alumnusfee.account.url, class: "btn text-primary mr-2" %>
-        </div>
+      <div class="text-right text-muted ml-1">
+        <h6 class="mb-1"><%= @alumnusfee.user.name %></h6>
+        <h6 class=""><%= distance_of_time_in_words(@alumnusfee.created_at, Time.now) %> 전</h6>
+        <h6><%= @alumnusfee.created_at.to_s.delete('UTC') %></h6>
+      </div>
+      <div class="text-right">
+        <% @alumnusfee.accounts.each do |account| %>
+          <%= link_to fa_icon("download 2x"), account.url, class: "btn text-primary mr-2" %>
+        <% end %>
       </div>
       <p class="card-text mx-2">
         <%= @alumnusfee.content.html_safe %>

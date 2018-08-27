@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :alumnusfees
+  # image upload with tinymce
+  post '/tinymce_assets' => 'tinymce_assets#create'
 
   resources :make_publics do
      collection do

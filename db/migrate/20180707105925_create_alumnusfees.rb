@@ -3,7 +3,7 @@ class CreateAlumnusfees < ActiveRecord::Migration[5.0]
     create_table :alumnusfees do |t|
       t.string :title
       t.text :content
-      t.string :account
+      t.string :accounts
       t.belongs_to :user, foreign_key: true
 
       t.timestamps

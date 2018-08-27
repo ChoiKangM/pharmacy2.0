@@ -74,6 +74,6 @@ class MakePublicsController < ApplicationController
     @make_public = MakePublic.find(params[:id])
   end
   def make_public_params
-    params.require(:make_public).permit(:title, :content,:information,:user_id,:kind)
+    params.require(:make_public).permit(:title, :content,:user_id,:kind,{informations: []})
   end
 end

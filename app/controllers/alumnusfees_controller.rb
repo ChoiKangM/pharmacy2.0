@@ -50,6 +50,6 @@ class AlumnusfeesController < ApplicationController
     @alumnusfee = Alumnusfee.find(params[:id])
   end
   def alumnusfee_params
-    params.require(:alumnusfee).permit(:title, :content, :account, :user_id)
+    params.require(:alumnusfee).permit(:title, :content, :user_id, {accounts: []})
   end
 end

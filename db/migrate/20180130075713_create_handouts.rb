@@ -4,7 +4,7 @@ class CreateHandouts < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :content
       t.belongs_to :user, foreign_key: true
-      t.string :file
+      t.string :files
 
       t.timestamps
     end

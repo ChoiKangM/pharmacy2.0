@@ -1,5 +1,6 @@
 class FileUploader < CarrierWave::Uploader::Base
-
+  # 파일 이름 한글패치
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick

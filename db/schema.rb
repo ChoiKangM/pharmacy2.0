@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180707105925) do
   create_table "alumnusfees", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.string   "account"
+    t.string   "accounts"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20180707105925) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.string   "image"
+    t.string   "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_cards_on_user_id"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180707105925) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.string   "file"
+    t.string   "files"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_handouts_on_user_id"
@@ -74,11 +74,11 @@ ActiveRecord::Schema.define(version: 20180707105925) do
   create_table "make_publics", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.string   "information"
+    t.string   "informations"
     t.integer  "user_id"
     t.string   "kind"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_make_publics_on_user_id"
   end
 

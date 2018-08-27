@@ -17,6 +17,7 @@ gem 'omniauth-kakao'
 gem 'bootstrap', '~> 4.1.0'
 gem "font-awesome-rails"
 gem 'tinymce-rails'
+#gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
