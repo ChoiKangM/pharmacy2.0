@@ -1183,7 +1183,7 @@ section.scholarship .intro-text .intro-heading{
     font-weight: 300;
 }
 .timeline .timeline-heading h4{
-    font-size: 30px;
+    font-size: 22px;
     margin-top:0;
     color:inherit;
     font-weight: 400;
@@ -1222,6 +1222,9 @@ section.scholarship .intro-text .intro-heading{
         font-size:13px;
         line-height:18px;
         margin-top:16px
+    }
+    .timeline .timeline-heading h4{
+        font-size: 30px;
     }
     .timeline>li.timeline-inverted>.timeline-panel{
         float:right;
