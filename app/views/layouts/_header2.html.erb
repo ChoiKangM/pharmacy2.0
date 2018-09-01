@@ -1,6 +1,9 @@
 <%# css는 application.scss, javascript는 없습니다%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" id="KNUPNav">
-  <%= link_to "KNUP", root_path, class: "navbar-brand" %>
+<nav class="navbar navbar-expand-lg navbar-dark w-100" id="KNUPNav">
+  <div class="navbar-brand">
+    <%= link_to "경북대학교", root_path, :class=> "first-logo"%>
+    <%= link_to "약학대학", root_path, :class=> "second-logo"%>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,19 +44,19 @@
           </div>
         </div>
       </li>
-      <li class="nav-item">
+      <%# <li class="nav-item"> %>
         <%#= link_to "동번제", cards_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
+      <%# </li> %>
+      <%# <li class="nav-item"> %>
         <%#= link_to "자치운영", help_path, class: "nav-link" %>
-      </li>
+      <%# </li> %>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to image_tag(current_user.proimg, height: '32', width: '32',class: "img-circular") + " " + current_user.name, userInformation_path, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= button_to "Login", user_google_oauth2_omniauth_authorize_path, class: "dropbtn" %>
+          <%= button_to "로그인", user_google_oauth2_omniauth_authorize_path, class: "dropbtn" %>
         </li>
       <% end %>
     </ul>

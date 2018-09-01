@@ -1,0 +1,148 @@
+/*introduction.html*/
+
+/*introduction-carousel*/
+.introduction-carousel {
+    display:flex;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    .carousel-item {
+        height: 500px;
+        width:100%;
+        overflow:hidden;
+        img {
+           
+        }
+    }
+    .carousel-caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+    }
+    .carousel-caption {
+        bottom: 48vw;
+    }
+    .carousel-shadow {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.15);
+        position:absolute;
+        bottom: 0;
+    }
+}
+
+
+
+/*speak*/
+.speak {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(42, 42, 42);
+    img {
+        height:auto;
+        width: 100%;
+        position: absolute;
+    }
+}
+.speak-bg {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: -200%;
+    z-index:0;
+    opacity: 0.1;
+
+}
+.speak-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        margin-bottom: 20px;
+        width: 70px;
+        border-bottom: 1.5px solid white;
+    }
+    h1 {
+        font-size: 25px;
+        color:white;
+        font-weight: 300;
+        line-height: 150%;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px){
+    .speak {
+        height: 200px;
+    }
+    .speak-bg {
+        top: -50%;
+    }
+    .speak-content {
+        h1 {
+            font-size: 15px;
+        }
+    }
+}
+
+/*introduction-content*/
+.introduction-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+    h1 {
+        font-size: 35px;
+        margin-top:40px;
+    }
+    span {
+        width: 50px;
+        margin-top:10px;
+        margin-bottom:10px;
+        border-bottom: 2px solid black;
+    }
+    img {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 70%;
+        height: auto;
+        position: relative;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205);
+    }
+}
+.introduction-content-bg {
+    background-image: url("https://media.istockphoto.com/vectors/crystal-lattice-vector-id187219353");
+    background-size:20% auto;
+    background-repeat: repeat;
+    opacity: 0.05;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:768px){
+    .introduction-content {
+        h1 {
+            font-size: 20px;
+            margin-top:15px;
+        }
+        span {
+            width:35px;
+
+        }
+        img {
+            margin-top:0px;
+            margin-bottom: 15px;
+        }
+    }
+    
+}

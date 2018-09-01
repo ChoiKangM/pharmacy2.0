@@ -68,14 +68,15 @@ a:hover{
     color:#fec503
 }
 .text-primary{
-    color:#fed136!important
+    color:#fed136!important;
+  
 }
 h1,h2,h3,h4,h5,h6{
     font-weight:700;
     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
 }
 section{
-    padding:100px 0
+    // padding:100px 0
 }
 section#about{
     padding: 50px 0;
@@ -91,13 +92,13 @@ section h3.section-subheading{
     font-size:16px;
     font-weight:400;
     
-    margin-bottom:75px;
+    margin-bottom:40px;
     text-transform:none;
     font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
 }
 @media (min-width:768px){
     section{
-        padding:150px 0
+        // padding:150px 0
     }
 }
 .btn{
@@ -391,90 +392,45 @@ header.alumni .intro-text .intro-heading{
     }
 }
 
-
-
-
-section.studentActivity{
-    text-align:left;
-    color:#212529;
-    height: 750px;
-    background: #f8f9fa no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.studentActivity .intro-text .intro-lead-in{
-    font-size:18px;
-    
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.studentActivity .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.studentActivity .intro-text .intro-lead-in{
-        font-size:32px;
-        
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.studentActivity .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
-
-header.studentActivity{
-    text-align:center;
-    color:#212529;
-    height: 500px;
-    background: url(asset-path('introductions/studentActivity.JPG')) no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-header.studentActivity .intro-text .intro-lead-in{
-    font-size:16px;
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-header.studentActivity .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    header.studentActivity .intro-text .intro-lead-in{
-        font-size:16px;
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    header.studentActivity .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
+// header.studentActivity{
+//     text-align:center;
+//     color:#212529;
+//     height: 500px;
+//     background: url(asset-path('introductions/studentActivity.JPG')) no-repeat center center;
+//     background-attachment:scroll;
+//     -webkit-background-size:cover;
+//     -moz-background-size:cover;
+//     -o-background-size:cover;
+//     background-size:cover
+// }
+// header.studentActivity .intro-text .intro-lead-in{
+//     font-size:16px;
+//     line-height:22px;
+//     margin-bottom:25px;
+//     font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// header.studentActivity .intro-text .intro-heading{
+//     font-size:50px;
+//     font-weight:700;
+//     line-height:50px;
+//     margin-bottom:25px;
+//     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// @media (min-width:768px){
+//     header.studentActivity .intro-text .intro-lead-in{
+//         font-size:16px;
+//         line-height:40px;
+//         margin-bottom:25px;
+//         font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+//     header.studentActivity .intro-text .intro-heading{
+//         font-size:75px;
+//         font-weight:700;
+//         line-height:75px;
+//         margin-bottom:50px;
+//         font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+// }
 
 
 header.makePublic{
@@ -531,89 +487,6 @@ header.makePublic .intro-text .intro-heading{
 }
 
 
-
-section.prepareGraduate{
-    text-align:right;
-    color:#212529;
-    height: 750px;
-    background: white no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.prepareGraduate .intro-text .intro-lead-in{
-    font-size:22px;
-    
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.prepareGraduate .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.prepareGraduate .intro-text .intro-lead-in{
-        font-size:32px;
-        
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.prepareGraduate .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
-
-
-section.club{
-    text-align:left;
-    color:#212529;
-    height: 750px;
-    background: #f8f9fa no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.club .intro-text .intro-lead-in{
-    font-size:22px;
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.club .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.club .intro-text .intro-lead-in{
-        font-size:32px;
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.club .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
 
 
 section.help-question{
@@ -793,49 +666,6 @@ section.help-knupManager .intro-text .intro-heading{
 
 
 
-section.alumni{
-    text-align:center;
-    color:#212529;
-    height: 600px;
-    background: light no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.alumni .intro-text .intro-lead-in{
-    font-size:22px;
-    
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.alumni .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.alumni .intro-text .intro-lead-in{
-        font-size:40px;
-        
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.alumni .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
-
-
 section.attendance{
     text-align:center;
     color: #f8f9fa;
@@ -880,49 +710,59 @@ section.attendance .intro-text .intro-heading{
 
 
 
-section.village{
-    text-align:center;
-    color:#212529;
-    height: 750px;
-    background-image: url(asset-path('introductions/village.JPG'));
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.village .intro-text .intro-lead-in{
-    font-size:22px;
-    
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.village .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.village .intro-text .intro-lead-in{
-        font-size:40px;
+// section.village{
+//     text-align:center;
+//     color:#212529;
+//     height: 750px;
+//     position: relative;
+//     background-image: url(asset-path('introductions/village.JPG'));
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-attachment:scroll;
+//     -webkit-background-size:cover;
+//     -moz-background-size:cover;
+//     -o-background-size:cover;
+//     background-size:cover
+// }
+// .village-bg {
+//     position:absolute;
+//     width:100%;
+//     height: 100%;
+//     background-color:rgba(0, 0, 0, 0.4);
+//     top: 0;
+//     z-index: 0;
+// }
+// section.village .intro-text .intro-lead-in{
+//     font-size:22px;
+//     position: relative;
+//     line-height:22px;
+//     margin-bottom:25px;
+//     font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// section.village .intro-text .intro-heading{
+//     font-size:50px;
+//     font-weight:700;
+//     line-height:50px;
+//     margin-bottom:25px;
+//     position: relative;
+//     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// @media (min-width:768px){
+//     section.village .intro-text .intro-lead-in{
+//         font-size:40px;
         
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.village .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
+//         line-height:40px;
+//         margin-bottom:25px;
+//         font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+//     section.village .intro-text .intro-heading{
+//         font-size:75px;
+//         font-weight:700;
+//         line-height:75px;
+//         margin-bottom:50px;
+//         font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+// }
 
 // section.village-image{
 //     text-align:center;
@@ -940,6 +780,7 @@ section.community{
     text-align:center;
     color:#212529;
     height: 750px;
+    position: relative;
     background: url(asset-path('introductions/section11.jpg')) no-repeat center center;
     background-attachment:scroll;
     -webkit-background-size:cover;
@@ -947,9 +788,17 @@ section.community{
     -o-background-size:cover;
     background-size:cover
 }
+.community-bg {
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    top: 0;
+    z-index: 0;
+}
 section.community .intro-text .intro-lead-in{
     font-size:22px;
-    
+    position: relative;
     line-height:22px;
     margin-bottom:25px;
     font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
@@ -957,6 +806,7 @@ section.community .intro-text .intro-lead-in{
 section.community .intro-text .intro-heading{
     font-size:50px;
     font-weight:700;
+    position: relative;
     line-height:50px;
     margin-bottom:25px;
     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
@@ -1062,45 +912,45 @@ section.scholarship .intro-text .intro-heading{
 }
 
 
-section.council{
-    text-align:left;
-    color:#212529;
-    height: 600px;
-    background: white no-repeat center center;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover
-}
-section.council .intro-text .intro-lead-in{
-    font-size:22px;
-    line-height:22px;
-    margin-bottom:25px;
-    font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-}
-section.council .intro-text .intro-heading{
-    font-size:50px;
-    font-weight:700;
-    line-height:50px;
-    margin-bottom:25px;
-    font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-}
-@media (min-width:768px){
-    section.council .intro-text .intro-lead-in{
-        font-size:40px;
-        line-height:40px;
-        margin-bottom:25px;
-        font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-    section.council .intro-text .intro-heading{
-        font-size:75px;
-        font-weight:700;
-        line-height:75px;
-        margin-bottom:50px;
-        font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
-    }
-}
+// section.council{
+//     text-align:left;
+//     color:#212529;
+//     height: 600px;
+//     background: rgb(114, 11, 80) no-repeat center center;
+//     background-attachment:scroll;
+//     -webkit-background-size:cover;
+//     -moz-background-size:cover;
+//     -o-background-size:cover;
+//     background-size:cover
+// }
+// section.council .intro-text .intro-lead-in{
+//     font-size:22px;
+//     line-height:22px;
+//     margin-bottom:25px;
+//     font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// section.council .intro-text .intro-heading{
+//     font-size:50px;
+//     font-weight:700;
+//     line-height:50px;
+//     margin-bottom:25px;
+//     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+// }
+// @media (min-width:768px){
+//     section.council .intro-text .intro-lead-in{
+//         font-size:40px;
+//         line-height:40px;
+//         margin-bottom:25px;
+//         font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+//     section.council .intro-text .intro-heading{
+//         font-size:75px;
+//         font-weight:700;
+//         line-height:75px;
+//         margin-bottom:50px;
+//         font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
+//     }
+// }
 
 
 .service-heading{
@@ -1255,7 +1105,9 @@ section.council .intro-text .intro-heading{
 .timeline>li{
     position:relative;
     min-height:50px;
-    margin-bottom:50px
+    margin-bottom:50px;
+    display:flex;
+    align-items: center;
 }
 .timeline>li:after,.timeline>li:before{
     display:table;
@@ -1301,8 +1153,11 @@ section.council .intro-text .intro-heading{
     line-height:14px;
     margin-top:12px
 }
+.timeline-inverted {
+    justify-content: flex-end;
+}
 .timeline>li.timeline-inverted>.timeline-panel{
-    float:right;
+    // float:right;
     padding:0 20px 0 100px;
     text-align:left
 }
@@ -1321,15 +1176,27 @@ section.council .intro-text .intro-heading{
 .timeline>li:last-child{
     margin-bottom:0
 }
-.timeline .timeline-heading h4{
+.timeline .timeline-heading h3{
+    font-size: 18px;
     margin-top:0;
-    color:inherit
+    color:inherit;
+    font-weight: 300;
+}
+.timeline .timeline-heading h4{
+    font-size: 30px;
+    margin-top:0;
+    color:inherit;
+    font-weight: 400;
 }
 .timeline .timeline-heading h4.subheading{
     text-transform:none
 }
 .timeline .timeline-body>p,.timeline .timeline-body>ul{
     margin-bottom:0
+}
+.timeline .timeline-body>p {
+    font-size: 15px;
+    font-weight: 400;
 }
 @media (min-width:768px){
     .timeline:before{
@@ -1340,7 +1207,7 @@ section.council .intro-text .intro-heading{
         margin-bottom:100px
     }
     .timeline>li .timeline-panel{
-        float:left;
+        // float:left;
         width:41%;
         padding:0 20px 20px 30px;
         text-align:right
@@ -1384,6 +1251,7 @@ section.council .intro-text .intro-heading{
     }
 }
 @media (min-width:1200px){
+   
     .timeline>li{
         min-height:170px
     }
