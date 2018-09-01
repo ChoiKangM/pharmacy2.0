@@ -193,7 +193,7 @@ a, a:hover {
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 /* Links inside the dropdown */
@@ -216,7 +216,6 @@ a, a:hover {
 
 /*header*/
 .navbar {
-
     background-color: #b62626;
     padding: 0rem 1rem 0 1rem;
     display:flex;
@@ -230,12 +229,12 @@ a, a:hover {
     .first-logo {
         font-size: 1.8rem;
         color: white;
-        font-weight: 300;
+        font-weight: 400;
     }
     .second-logo {
         color: white;
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 
