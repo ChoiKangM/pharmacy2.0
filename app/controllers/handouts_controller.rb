@@ -1,6 +1,6 @@
 class HandoutsController < ApplicationController
   before_action :find_handout, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   
   def index
     @handouts = Handout.order(created_at: :DESC).page(params[:page]).per(12)

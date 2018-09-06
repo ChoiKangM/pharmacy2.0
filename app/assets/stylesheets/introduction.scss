@@ -1,5 +1,44 @@
 /*introduction.html*/
 
+/*introduction-nav */
+.introduction-nav {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size:20px;
+        margin: 0 40px;
+        font-weight: 400;
+        color: rgb(129, 129, 129);
+    }
+    a:hover {
+        color:white;
+    }
+}
+
+@media (max-width:650px){
+    .introduction-nav {
+        height: 50px;
+        a {
+            margin: 0 25px;
+        }
+    }
+
+}
+
+@media (max-width:500px){
+    .introduction-nav {
+        a {
+            margin: 0 10px;
+            font-size: 15px;
+        }
+    }
+
+}
 /*introduction-carousel*/
 .introduction-carousel {
     display:flex;

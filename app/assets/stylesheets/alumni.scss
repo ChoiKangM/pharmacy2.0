@@ -1,0 +1,44 @@
+
+
+.council.alumni {
+    a {
+        font-size: 20px;
+        margin-top: 15px;
+        color: white;
+        font-weight: 400;
+
+    }
+    .council-content {
+        width: 55%;
+    }
+}
+
+@media (max-width:1400px){
+    .council.alumni {
+        height: 400px;
+
+        .council-content {
+            width: 60%;
+        }
+    }
+}
+@media (max-width:1000px){
+    .council.alumni {
+        height: 350px;
+        .council-content {
+            width: 70%;
+        }
+    }
+}
+@media (max-width:700px){
+    .council.alumni {
+        height: 250px;
+        .council-content {
+            width: 90%;
+            a {
+                margin-top: 0px;
+                font-size: 15px;
+            }
+        }
+    }
+}

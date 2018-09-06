@@ -1,11 +1,9 @@
-<div class="container">
-    <h3 class="text-center my-4">6기 - 14학번</h3>
-    <div class="row">
+<h3 class="text-center " style="margin-top: 30px;margin-bottom:20px;">6기 - 14학번</h3>
+<div class="d-flex justify-content-around align-items-around grade">
         <% @fourthGrade14.each do |student| %>
-            <div class="col-lg-3 col-sm-4 col-6">
-                <%= image_tag "/assets/fourthGrade14/#{student}" ,class: "img-thumbnail"%>
+            <div class="grade-picture">
+                <%= image_tag "/assets/fourthGrade14/#{student}" ,class: ""%>
                 <%= content_tag(:p, "#{student.split('.').first.split(' ').last}", class: ["text-muted", "text-center"])%>  
             </div>
         <% end %>
-    </div>
 </div>

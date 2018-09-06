@@ -32,7 +32,7 @@
           <tr class="tr2">
             <td class="td1"><%=n.id %></td>
             <td class="td2"><%= link_to n.title, notice_path(n)%></td>
-            <td class="td3"><%=  %></td> 
+            <td class="td3"><%= n.user.name %></td> 
             <td class="td4"><%=distance_of_time_in_words(n.created_at,Time.now) %></td>
           </tr>
         <% end %>
