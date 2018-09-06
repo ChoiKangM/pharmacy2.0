@@ -1,5 +1,5 @@
 class IntroductionsController < ApplicationController
-  before_action :authenticate_user!, only: [:attendance,:operationCommittee]
+  # before_action :authenticate_user!, only: [:attendance,:operationCommittee]
   def userInformation
   end
   

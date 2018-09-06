@@ -1,6 +1,6 @@
 class NoticesController < ApplicationController
   before_action :find_notice, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @notices = Notice.order(created_at: :DESC).page(params[:page]).per(12)
   end

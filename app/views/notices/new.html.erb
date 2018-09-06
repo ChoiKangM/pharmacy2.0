@@ -2,7 +2,7 @@
 <%#= TODO: 블로그?  %>
 <div class="container my-4">
   <%= form_for(@notice) do |n| %>
-    <%= n.hidden_field :user_id, value: current_user.id %>
+    <%# <%= n.hidden_field :user_id, value: current_user.id %>
     <div class="form-group">
       <%= n.label :title, value: "제목" %>
       <%= n.text_field :title, class: "form-control" %>

@@ -1,47 +1,49 @@
-<header class="w-100 header-notices">
-    <div class="container h-100 d-flex flex-column justify-content-center">
-      <div class="d-flex flex-row justify-content-between">
-        <h2>뉴스룸</h2>
-        <p align="right">
-          <%= link_to "글쓰기", new_notice_path, class: "btn border text-white btn-muted" %>
-        </p>
+<div class="notice-top">
+<img src="/assets/introductions/university.jpg">  
+<div class="notice-bg"></div>
+  <%# <img src="/assets/introductions/section10.jpg"> %>
+</div>
+<div class="notice">
+  <div class="notice-left">
+    <div class="notice-left-menu">
+      <div>
+        <h1>커뮤니티</h1>
       </div>
-    </div>
-</header>
-<section class="container pt-0 mb-4 mt-xs-3">
-  <div class="pt-xs-5 pt-3 pt-md-4 mt-2">
-    <div class="row py-2 bt-gray-1 bb-gray-1 bg-gray-dark d-none d-sm-flex">
-      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        <h6>#</h6>
-      </div>
-      <div class="col-10 col-sm-5 col-lg-7 col-xl-7 mb-1 mb-sm-0 font-size-base-xs-down">
-        <h6>제목</h6>
-      </div>
-      <div class="col-2 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
-        <h6>글쓴이</h6>
-      </div>
-      <div class="col-2 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
-        <h6>날짜</h6>
-      </div>
+      <a href="/notices" class="notice-active"><h2>뉴스룸</h2></a>
+      <a><h2>KNUP Story</h2></a>
+      <a href="/handouts"><h2>학습자료실</h2></a>
+      <a href="/cards"><h2>동번제</h2></a>
     </div>
   </div>
-  <% @notices.each do |n| %>
-    <div class="row">
-      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
-        <%= n.id %>
-      </div>
-      <div class="col-10 col-sm-5 col-lg-7 col-xl-7 m-0">
-        <%= link_to n.title, notice_path(n) %>
-      </div>
-      <div class="col-4 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
-        <%= n.user.name %>
-      </div>
-      <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
-        <%= distance_of_time_in_words(n.created_at,Time.now) %> 전
-      </div>
+  <div class="notice-content">
+    <div class="notice-content-top d-flex align-items-center justify-content-between">
+      <h1>뉴스룸</h1>
+      <%= link_to "글쓰기", new_notice_path, class: "" %>
     </div>
-  <% end %>
-  <div class="d-flex justify-content-center mt-2">
-    <%= paginate @notices, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+    <table class="notice-content-table">
+      <tr class="tr1">
+        <th class="td1">#</th>
+        <th class="td2">제목</th>
+        <th class="td3">글쓴이</th>
+        <th class="td4">작성 시간</th>
+      </tr>
+      <tbody>
+        <% @notices.each do |n| %>
+          <tr class="tr2">
+            <td class="td1"><%=n.id %></td>
+            <td class="td2"><%= link_to n.title, notice_path(n)%></td>
+            <td class="td3"><%=  %></td> 
+            <td class="td4"><%=distance_of_time_in_words(n.created_at,Time.now) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="notice-content-bottom">
+      <input type="text">
+      <input type="submit" value="검색">
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+      <%= paginate @notices, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+    </div>
   </div>
-</section>
+</div>

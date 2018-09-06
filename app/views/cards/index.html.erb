@@ -1,24 +1,37 @@
-<header class="w-100 header-cards">
-    <div class="container h-100 d-flex flex-column justify-content-center">
-      <div class="d-flex flex-row justify-content-between">
-        <h2>동번제</h2>
-        <p align="right">
-          <%= link_to "글쓰기", new_card_path, class: "btn btn-info" %>
-        </p>
+
+<div class="notice-top">
+<img src="/assets/introductions/university.jpg">  
+<div class="notice-bg"></div>
+  <%# <img src="/assets/introductions/section10.jpg"> %>
+</div>
+<div class="notice">
+  <div class="notice-left">
+    <div class="notice-left-menu">
+      <div>
+        <h1>커뮤니티</h1>
       </div>
+      <a href="/notices" ><h2>뉴스룸</h2></a>
+      <a><h2>KNUP Story</h2></a>
+      <a href="/handouts" ><h2>학습자료실</h2></a>
+      <a href="/cards" class="notice-active"><h2>동번제</h2></a>
     </div>
-</header>
-<section class="container my-4 pt-0">
+  </div>
+  <div class="notice-content">
+    <div class="notice-content-top d-flex align-items-center justify-content-between">
+      <h1>동번제</h1>
+       <%= link_to "글쓰기", new_card_path, class: "" %>
+    </div>
+    <section class="container my-4 pt-0">
   <div class="row">
     <% @cards.each do |c| %>
       <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-2">
         <div class="card">
-          <%= image_tag(c.images.first.thumb) %>
+          <%# <%= image_tag(c.images.first.thumb) %> 
           <div class="card-body">
             <h4 class="card-title"><%= c.title %></h4>
-            <h6 class="card-subtitle mb-2 text-muted">@<%= c.user.name %></h6>
+            <h6 class="card-subtitle mb-2 text-muted">@<%= %></h6>
             <p class="card-text"><%= c.content.html_safe %></p>
-            <%= link_to "Show", card_path(c), class: "btn btn-primary" %>
+            <%= link_to "보기 →", card_path(c), class: "" %>
           </div>
         </div>
       </div>
@@ -28,3 +41,7 @@
     <%= paginate @cards, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
   </div>
 </section>
+  </div>
+</div>
+
+

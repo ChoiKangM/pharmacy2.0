@@ -110,10 +110,14 @@
         margin-bottom:10px;
         border-bottom: 2px solid black;
     }
+    a {
+        width: 70%;
+        
+    }
     img {
         margin-top: 30px;
         margin-bottom: 40px;
-        width: 70%;
+        width: 100%;
         height: auto;
         position: relative;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205);
@@ -139,7 +143,7 @@
             width:35px;
             margin-top:0;
         }
-        img {
+        a {
             width: 90%;
             margin-top:0px;
             margin-bottom: 15px;

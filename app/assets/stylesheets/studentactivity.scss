@@ -75,7 +75,7 @@
 
 /*start*/
 .start {
-    padding: 0 20%;
+    padding: 0 25%;
     height: 150px;
     width: 100%;
     background-color: rgb(29, 29, 29);
@@ -219,17 +219,21 @@
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-    img {
+    a {
         margin: 20px 0;
         width: 70%;
         height: auto;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205);
     }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width:1000px){
     .village {
-        img {
+        a {
             margin: 10px 0;
              width: 90%;
         }
