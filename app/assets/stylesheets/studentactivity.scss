@@ -40,7 +40,9 @@
     display: flex;
 
 }
-
+.student-act {
+    cursor:pointer;
+}
 @media (max-width:1000px){
     .studentact {
         height: auto;

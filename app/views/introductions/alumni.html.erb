@@ -4,12 +4,23 @@
   <h1>총동창회 </h1>
   <h2>약학대학의 역사와 전통</h2>
   <div class="student-act">
-    <a>소개</a>
-    <a>회원 찾기</a>
-    <a>장학금 조성</a>
+    <a onclick="Move1()">소개</a>
+    <a onclick="Move(1)">회원 찾기</a>
+    <a onclick="Move(2)">장학금 조성</a>
   </div>
   <img src="/assets/introductions/memo.png">
 </section>
+
+<script>
+     function Move(seq){
+        var offset = $(".village"+seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 600);
+    }
+        function Move1(){
+        var offset = $(".council.alumni").offset();
+        $('html, body').animate({scrollTop : offset.top}, 600);
+    }
+</script>
 
 <section class="council alumni">
   <img src="/assets/introductions/together.jpg" class="council-bg">
@@ -23,6 +34,6 @@
 </section>
 
 <section class="village">
-  <a href="/introductions/attendance"><img src="/assets/introductions/find.png"></a>
-  <a href="/helps/contactUs"><img src="/assets/introductions/scholarship.png"></a>
+  <a href="/introductions/attendance" class="village1"><img src="/assets/introductions/find.png"></a>
+  <a href="/helps/contactUs" class="village2"><img src="/assets/introductions/scholarship.png"></a>
 </section>
