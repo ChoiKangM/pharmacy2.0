@@ -1,6 +1,6 @@
 <div class="container my-4">
   <%= form_for(@card, html: { multipart: true }) do |c| %>
-    <%# <%= c.hidden_field :user_id, value: current_user.id %> %>
+    <%= c.hidden_field :user_id, value: current_user.id %>
     <div class="form-group">
       <%= c.label :title, value: "제목" %>
       <%= c.text_field :title, class: "form-control" %>
