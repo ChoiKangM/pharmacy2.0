@@ -1,5 +1,44 @@
 /*introduction.html*/
 
+/*introduction-nav */
+.introduction-nav {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size:20px;
+        margin: 0 40px;
+        font-weight: 400;
+        color: rgb(129, 129, 129);
+    }
+    a:hover {
+        color:white;
+    }
+}
+
+@media (max-width:650px){
+    .introduction-nav {
+        height: 50px;
+        a {
+            margin: 0 20px;
+        }
+    }
+
+}
+
+@media (max-width:500px){
+    .introduction-nav {
+        a {
+            margin: 0 5px;
+            font-size: 15px;
+        }
+    }
+
+}
 /*introduction-carousel*/
 .introduction-carousel {
     display:flex;
@@ -110,10 +149,14 @@
         margin-bottom:10px;
         border-bottom: 2px solid black;
     }
+    a {
+        width: 70%;
+        
+    }
     img {
         margin-top: 30px;
         margin-bottom: 40px;
-        width: 70%;
+        width: 100%;
         height: auto;
         position: relative;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205);
@@ -139,7 +182,7 @@
             width:35px;
             margin-top:0;
         }
-        img {
+        a {
             width: 90%;
             margin-top:0px;
             margin-bottom: 15px;

@@ -1,13 +1,23 @@
+<%= render "/introductions/nav"%>
 <section class="studentact">
   <h1>학생 생활 </h1>
   <h2>행복한 대학</h2>
   <div class="student-act">
-    <a>학생회 </a>
-    <a>빌리지 </a>
-    <a>동번제 </a>
+    <a onclick="Move(1)">학생회 </a>
+    <a onclick="Move(2)">빌리지 </a>
+    <a onclick="Move(3)">동번제 </a>
   </div>
   <img src="/assets/introductions/memo.png">
 </section>
+
+<script>
+     function Move(seq){
+        var offset = $(".village"+seq).offset();
+        console.log(offset.top);
+        $('html, body').animate({scrollTop : offset.top}, 1500);
+    }
+</script>
+
 
 <section class="start">
   <div class="start-content">
@@ -150,7 +160,7 @@
 </section>
 
 <section class="village">
-  <img src="/assets/introductions/dod.png">
-  <img src="/assets/introductions/village.png">
-  <img src="/assets/introductions/party.png">
+  <a href="/introductions/operationCommittee" class="village1"><img src="/assets/introductions/dod.png"></a>
+  <a href="/introductions/village" class="village2"><img src="/assets/introductions/village.png"></a>
+  <a href="/cards" class="village3"><img src="/assets/introductions/party.png"></a>
 </section>

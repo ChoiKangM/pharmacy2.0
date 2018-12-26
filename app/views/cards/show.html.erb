@@ -22,7 +22,7 @@
       <div class="d-flex flex-wrap">
         <%#= TODO: 이미지 모양 이상%>
         <% @card.images.each do |image|%>
-          <%= image_tag image, class: 'img-fluid mx-auto',style:"height: auto;" %>
+          <%= image_tag image, class: "img-fluid mx-auto",style:"max-width:100%;height:auto" %>
           <br>
         <% end %>
       </div>

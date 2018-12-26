@@ -1,61 +1,39 @@
 <!-- Header -->
-<header class="alumni">
-  <div class="container d-flex align-items-center justify-content-center">
-    <div class="intro-text">
-      <div class="intro-heading text-uppercase">
-      </div>
-      <div class="intro-lead-in">
-      </div>
-      <!--<a class="btn btn-info btn-xl text-uppercase" href="https://goo.gl/forms/OF0eOYFT295BvdOq1">신입생 등록하기</a>-->
-      <%#= link_to "신입생 등록하기", mainEvent_path, class: "btn btn-info btn-xl text-uppercase" %>
-    </div>
+<%= render "/introductions/nav"%>
+<section class="studentact alumni">
+  <h1>총동창회 </h1>
+  <h2>약학대학의 역사와 전통</h2>
+  <div class="student-act">
+    <a onclick="Move1()">소개</a>
+    <a onclick="Move(1)">회원 찾기</a>
+    <a onclick="Move(2)">장학금 조성</a>
   </div>
-</header>
-<%# TODO: 경약인의 밤 사진? %>
-<!-- alumniContact -->
-<section class="alumniContact d-flex align-items-center justify-content-center">
-  <div class="container d-flex align-items-center justify-content-center text-white">
-    <div class="intro-text">
-      <div class="intro-heading">
-        
-      </div>
-      <div class="intro-lead-in">
-        <p>매년 경약인의 밤, 신입동문 환영행사를 개최하여</p>
-        <p>동문들간의 결속을 다지고 있습니다.</p>
-      </div>
-      <a class="btn btn-info btn-xl text-uppercase" href="/helps/contactUs">총동창회 문의하기</a>
-    </div>
+  <img src="/assets/hat.png">
+</section>
+
+<script>
+     function Move(seq){
+        var offset = $(".village"+seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 600);
+    }
+        function Move1(){
+        var offset = $(".council.alumni").offset();
+        $('html, body').animate({scrollTop : offset.top}, 600);
+    }
+</script>
+
+<section class="council alumni">
+  <img src="/assets/introductions/together.jpg" class="council-bg">
+  <div class="council-content">
+    <div></div>
+    <h1>2015년 첫 졸업생을 배출과 함께 설립된  경북대학교 약학대학 총동창회는
+     매년 경약인의 밤, 신입동문 환영행사를 개최하여 동문들간의 결속을 다지고
+      있습니다. 우리 동문들의 앞으로의 사회 각 분야에서의 활약을 기대해봅니다.</h1>
+      <a href="/helps/contactUs">총동창회 문의하기 →</a>
   </div>
 </section>
 
-<!-- scholarship -->
-<section class="scholarship d-flex align-items-center justify-content-center">
-  <div class="container d-flex align-items-center justify-content-center">
-    <div class="intro-text">
-      <div class="intro-heading">
-        <img src="../cash.png" height="128px">
-      </div>
-      <div class="intro-lead-in">
-        <p>매년 각 동기회에서  장학회 기금을 조성하여</p>
-        <p>학부생들에게 매년 장학금을 지급하고 있습니다</p>
-      </div>
-      <!--<a class="btn btn-info btn-xl text-uppercase" href="/introductions/studentActivity">학생생활</a>-->
-    </div>
-  </div>
-</section>
-
-<!-- attendance -->
-<section class="attendance d-flex align-items-center justify-content-center">
-  <div class="container d-flex align-items-center justify-content-center">
-    <div class="intro-text">
-      <div class="intro-heading text-uppercase">
-        <img src="../magnifier.png" height="128px">
-      </div>
-      <div class="intro-lead-in">
-        <p></p>
-      </div>
-      <%#= TODO: 회원소개 링크 연결 %>
-      <a class="btn btn-info btn-xl text-uppercase" href="/introductions/attendance">회원소개</a>
-    </div>
-  </div>
+<section class="village">
+  <a href="/introductions/attendance" class="village1"><img src="/assets/introductions/find.png"></a>
+  <a href="/helps/contactUs" class="village2"><img src="/assets/introductions/scholarship.png"></a>
 </section>

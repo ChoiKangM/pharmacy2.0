@@ -20,7 +20,10 @@
   <body>
     <%= render 'layouts/header2' %>
     <%= render 'layouts/flash_message' %>
-    <%= yield %>
+    <%# footer가 바로 붙으면 못생겨서 1000px을 기본으로 잡겠습니다 %>
+    <div style="min-height:100vh;position:relative;">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer2' %>
   </body>
 </html>
