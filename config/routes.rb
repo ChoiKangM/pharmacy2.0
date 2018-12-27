@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  # Search in Dashboard
+  get 'nsearches/result'
   get 'hsearches/result'
-
-  get 'searches/result'
 
   resources :alumnusfees
   # image upload with tinymce
