@@ -28,7 +28,7 @@
         <th class="td4">작성 시간</th>
       </tr>
       <tbody>
-        <% @handouts.each do |n| %>
+        <% @hsearches.each do |n| %>
           <tr class="tr2">
             <td class="td1"><%=n.id %></td>
             <td class="td2"><%= link_to n.title, handout_path(n)%></td>
@@ -46,7 +46,7 @@
     -->
     <%= render 'hsearches/hsearch_form', post: @handouts.klass %>
     <div class="d-flex justify-content-center mt-2">
-      <%= paginate @handouts, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+      <%= paginate @hsearches, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
     </div>
   </div>
 </div>
