@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Search in Dashboard
+  get 'nsearches/result'
+  get 'hsearches/result'
+
   resources :alumnusfees
   # image upload with tinymce
   post '/tinymce_assets' => 'tinymce_assets#create'

@@ -28,7 +28,7 @@
         <th class="td4">작성 시간</th>
       </tr>
       <tbody>
-        <% @notices.each do |n| %>
+        <% @nsearches.each do |n| %>
           <tr class="tr2">
             <td class="td1"><%=n.id %></td>
             <td class="td2"><%= link_to n.title, notice_path(n)%></td>
@@ -47,7 +47,7 @@
     <%= render 'nsearches/nsearch_form', post: @notices.klass %>
 
     <div class="d-flex justify-content-center mt-2">
-      <%= paginate @notices, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+      <%= paginate @nsearches, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
     </div>
   </div>
 </div>

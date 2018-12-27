@@ -9,16 +9,16 @@
       <div>
         <h1>커뮤니티</h1>
       </div>
-      <a href="/notices" class="notice-active"><h2>뉴스룸</h2></a>
+      <a href="/notices" ><h2>뉴스룸</h2></a>
       <a><h2>KNUP Story</h2></a>
-      <a href="/handouts"><h2>학습자료실</h2></a>
+      <a href="/handouts" class="notice-active"><h2>학습자료실</h2></a>
       <a href="/cards"><h2>동번제</h2></a>
     </div>
   </div>
   <div class="notice-content">
     <div class="notice-content-top d-flex align-items-center justify-content-between">
-      <h1>뉴스룸</h1>
-      <%= link_to "글쓰기", new_notice_path, class: "" %>
+      <h1>학습자료실</h1>
+      <%= link_to "글쓰기", new_handout_path, class: "" %>
     </div>
     <table class="notice-content-table">
       <tr class="tr1">
@@ -28,26 +28,27 @@
         <th class="td4">작성 시간</th>
       </tr>
       <tbody>
-        <% @notices.each do |n| %>
+        <% @hsearches.each do |n| %>
           <tr class="tr2">
             <td class="td1"><%=n.id %></td>
-            <td class="td2"><%= link_to n.title, notice_path(n)%></td>
-            <td class="td3"><%= n.user.name %></td> 
+            <td class="td2"><%= link_to n.title, handout_path(n)%></td>
+            <td class="td3"><%=n.user.name  %></td> 
             <td class="td4"><%=distance_of_time_in_words(n.created_at,Time.now) %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <!-- 원래 검색창 형태  
+    <!-- 원래 검색창 형태 
     <div class="notice-content-bottom">
       <input type="text">
       <input type="submit" value="검색">
     </div>
     -->
-    <%= render 'nsearches/nsearch_form', post: @notices.klass %>
-
+    <%= render 'hsearches/hsearch_form', post: @handouts.klass %>
+    
     <div class="d-flex justify-content-center mt-2">
-      <%= paginate @notices, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+      <%= paginate @hsearches, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
     </div>
   </div>
 </div>
+
