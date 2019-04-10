@@ -40,6 +40,25 @@ class IntroductionsController < ApplicationController
     # B5 - 회원소개
     
   end
+  def newbie17
+    @newbie17 = [ "1 고지현.jpg",		   "24 장효인.jpg",
+                  "10 박은솔.jpg",			"25 정민철.jpg",
+                  "11 박하영.jpg",		  "26 조정일.jpg",
+                  "12 백민정.jpg",			"27 최문기.jpg",
+                  "13 변혜진.jpg",			"28 최찬송.jpg",
+                  "14 설정은.jpg",			"29 홍준기.jpg",
+                  "15 송현우.jpg",			"3 김재섭.jpg",
+                  "16 양진하.jpg",			"30 황원섭.jpg",
+                  "17 오민경.jpg",			"31 황지현.jpg",
+                  "18 유남규.jpg",			"4 김진환.jpg",
+                  "19 이수민.jpg",			"5 김현지.jpg",
+                  "2 김동명.jpg",			   "6 김혜연.jpg",
+                  "20 이정민.jpg",				"7 김희연.jpg",
+                  "21 이정택.jpg",				"8 나세령.jpg",
+                  "22 이진솔.jpg",				"9 문금주.jpg",
+                  "23 임상은.jpg"
+    ]
+  end
   def secondGrade16
      @secondGrade16 = [ "16 신미경.jpg","16 곽철영.jpg","16 구현진.jpg","16 김가영.jpg","16 김규비.jpg",
                         "16 김예린.jpg","16 김재훈.jpg","16 김태수.jpg","16 노수경.jpg","16 노현석.jpg",
