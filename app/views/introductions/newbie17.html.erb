@@ -1,0 +1,10 @@
+
+<h3 class="text-center " style="margin-top: 30px;margin-bottom:20px;">9기 - 17학번</h3>
+<div class="d-flex justify-content-around align-items-around grade">
+        <% @newbie17.each do |student| %>
+            <div class="grade-picture">
+                <%= image_tag "/assets/newbie17/#{student}" ,class: ""%>
+                <%= content_tag(:p, "#{student.split('.').first.split(' ').last}", class: ["text-muted", "text-center"])%>  
+            </div>
+        <% end %>
+</div>

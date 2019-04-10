@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   get '/introductions/fourthGrade14', as:'fourthGrade14'
   get '/introductions/thirdGrade15', as:'thirdGrade15'
   get '/introductions/secondGrade16', as:'secondGrade16'
+  get '/introductions/newbie17', as:'newbie17'
   get '/introductions/operationCommittee', as: 'operationCommittee'
   
   # F
